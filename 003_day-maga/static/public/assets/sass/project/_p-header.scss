@@ -31,14 +31,16 @@
 		width: fit-content;
 		height: fit-content;
 		display: flex;
-		align-items: center;
 		flex-direction: column;
-		gap: 2.4rem;
-		padding: 1.6rem 2.4rem 2.8rem;
+		gap: 1.6rem;
+		padding: 2.8rem 2.4rem 2.8rem;
 		position: absolute;
 		top: 0;
 		right: 0;
 		z-index: 100;
+		&.is-open{
+			gap: 3.2rem;
+		}
 	}
 
 }
@@ -50,31 +52,50 @@
 	gap: 0 4.8rem;
 	@include mq(lg-down){
 		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		gap: 3.2rem;
 		width: 0;
 		height: 0;
 		visibility: hidden;
+		opacity: 0;
 		overflow: hidden;
-		transition: all 0.3s ease 0s;
+		transition: all 0.5s ease 0s;
 		.is-open &{
 			width: 24rem;
-			height: 36rem;
+			height: 17.2rem;
 			visibility: visible;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+			opacity: 1;
 		}
 	}
 
 }
 
 .p-header__nav__item{
-
+	@include mq(lg-down){
+		width: 100%;
+	}
 }
 
 .p-header__nav__link{
 	color: var(--white, #FFF);
-	font-size: 1.6rem;	font-weight: 700;
+	font-size: 1.6rem;
+	font-weight: 700;
 	line-height: 120%;
+	display: block;
+	width: 100%;
+	text-align: center;
+	@include hs(hp){
+		transition: all 0.3s ease 0s;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	@include hs(hi){
+		&:active{
+			opacity: 0.8;
+		}
+	}
 }
 
 .p-header__nav__cta{
@@ -109,8 +130,9 @@
 .p-header__hamburger{
 	appearance: none;
 	width: 3.6rem;
-	height: 4.4rem;	// タップ範囲44px固定
+	height: 2.4rem;	// タップ範囲44px固定
 	cursor: pointer;
+	margin-left: auto;
 	position: relative;
 	z-index: 30;	//box-shadowより手前に配置
 	@include hs(hp){
@@ -131,7 +153,7 @@
 	width: 100%;
 	height: 24px;	//実際のhamburgerボタンの高さ
 	position: relative;
-	top: 4px;
+	top: 0;
 	left: 0;
 }
 

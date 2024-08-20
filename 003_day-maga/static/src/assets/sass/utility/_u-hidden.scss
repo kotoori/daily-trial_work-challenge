@@ -9,14 +9,14 @@
 
 .u-md-down{
 	display: none;
-	@include mq(md){
+	@include mq(md-down){
 		display: inherit;
 	}
 }
 
 .u-lg-down{
 	display: none;
-	@include mq(lg){
+	@include mq(lg-down){
 		display: inherit;
 	}
 }
