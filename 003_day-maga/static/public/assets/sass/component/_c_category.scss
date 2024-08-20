@@ -1,0 +1,42 @@
+@use "global"	as *;
+
+.c-category{
+	display: flex;
+	padding: 0.4rem 1.6rem;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	font-size: 1.3rem;
+	font-weight: 400;
+	line-height: 160%; /* 20.8px */
+	background: #FFF;	
+	border-radius: 0.4rem;
+	color: var(--gray33333, #343436);
+	border: 1px solid var(--gray33333, #343436);
+}
+
+.c-category--blue{
+	@extend .c-category;
+	color: var(--blue, #135097);
+	border: 1px solid var(--blue, #135097);
+
+}
+
+.c-category--coralblue{
+	@extend .c-category;
+	color: var(--coralblue, #42A0AD);
+	border: 1px solid var(--coralblue, #42A0AD);
+}
+
+
+.c-category--purple{
+	@extend .c-category;
+	color: var(--purple, #C88DEC);
+	border: 1px solid var(--purple, #C88DEC);
+}
+
+.c-category--purple2{
+	@extend .c-category;
+	color: var(--purple2, #9C8CFF);
+	border: 1px solid var(--purple2, #9C8CFF);
+}

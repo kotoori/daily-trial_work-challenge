@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.c-btn{
+	display: flex;
+	padding: 0.8rem 2.6rem;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;
+	border: 0.2rem solid var(--blue, #135097);
+	border-radius: 2rem 2rem 0px 2rem;
+	background: var(--blue, #135097);
+	box-shadow: 0px 0.2rem 2.4rem 0px rgba(0, 0, 0, 0.10);
+	color: var(--white, #FFF);
+	font-family: $font-family2;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 180%; /* 36px */
+	letter-spacing: 0.2em;
+	@include mq(sm){
+		font-size: 1.8rem;
+	}
+	@include hs(hp){
+		&:hover{
+			background: var(--white, #FFF);
+			color: var(--blue, #135097);
+			}
+	}
+	@include hs(hi){
+		&:active{
+			background: var(--white, #FFF);
+			color: var(--blue, #135097);
+			}
+	}
+}
+
+.c-btn-cta{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 0.1rem solid var(--white, #FFF);
+	border-radius: 0.8rem;
+	overflow: hidden;
+	@include hs(hp){
+		&:hover{
+			opacity: 0.8;
+			translate: 0 0.4rem;
+		}
+	}
+	@include hs(hi){
+		&:active{
+			opacity: 0.8;
+			translate: 0 0.4rem
+		}
+	}
+	.c-btn-cta__upper{
+		width: 100%;
+		background: var(--blue, #135097);
+		color: var(--white, #FFF);
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: 700;
+		line-height: 166.667%;
+		padding: 0.1rem 0.4rem 0;
+	}
+	
+	.c-btn-cta__lower{
+		width: 100%;
+		background: var(--white, #FFF);
+		color: var(--blue, #135097);
+		text-align: center;
+		font-size: 1.6rem;
+		font-weight: 700;
+		line-height: 125%;
+		padding: 0.4rem;
+	}
+}
+
+.c-btn-cta--ptn2{
+	@extend .c-btn-cta;
+	.c-btn-cta__upper{
+		background: var(--white, #FFF);
+		color: var(--blue, #135097);
+	}
+	.c-btn-cta__lower{
+		background: var(--blue, #135097);
+		color: var(--white, #FFF);
+	}
+
+}
