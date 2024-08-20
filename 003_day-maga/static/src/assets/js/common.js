@@ -1,3 +1,4 @@
+jQuery(function(){
 /*===============================
 Hamburger Menu
 ===============================*/
@@ -24,3 +25,16 @@ jQuery(function(){
 		jQuery(drawerOverlay).removeClass(openClass);
 	})
 })
+
+/*===============================
+スクロール検出
+===============================*/
+jQuery(window).on('scroll', function(){
+	const scroll = jQuery(window).scrollTop();
+	if(scroll > 10){
+		jQuery('.l-header').addClass('is-scroll');
+	}else{
+		jQuery('.l-header').removeClass('is-scroll');
+	}
+});
+});//jQuery End

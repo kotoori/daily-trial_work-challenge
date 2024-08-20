@@ -4,6 +4,9 @@
 	display: flex;
 	justify-content: space-between;
 	position: relative;
+	.is-scroll &{
+		background: var(--right-gray, #E6EDF3);
+	}
 }
 
 .p-header__logo{
@@ -12,12 +15,35 @@
 	@include mq(lg-down){
 		margin: 3.2rem 0 0 2.0rem;
 	}
+	.is-scroll &{
+		width: 20.6rem;
+		margin: 2.9rem 0 0 4.8rem;
+		@include mq(lg-down){
+			width: 16rem;
+			margin: 2.0rem 0 0 2.4rem;
+		}
+	}
 }
 
 .p-header__logo__link{
 	width: 100%;
-
 }
+
+.p-header__logo__img{
+	display: block;
+	transition: all 0.3s ease 0s;
+	.is-scroll &{
+		display: none;
+		opacity: 0;
+	}
+}
+.p-header__logo__img--scroll{
+	display: none;
+	.is-scroll &{
+		display: block;
+	}
+}
+
 
 .p-header__nav{
 	border-radius: 0px 0px 0px 32px;
@@ -38,11 +64,15 @@
 		top: 0;
 		right: 0;
 		z-index: 100;
+		.is-scroll &{
+			flex-direction: row;
+			gap: 2.4rem;
+		}
 		&.is-open{
+			flex-direction: column;
 			gap: 3.2rem;
 		}
 	}
-
 }
 
 .p-header__nav__list{
@@ -62,7 +92,7 @@
 		overflow: hidden;
 		transition: all 0.5s ease 0s;
 		.is-open &{
-			width: 24rem;
+			width: 19.2rem;
 			height: 17.2rem;
 			visibility: visible;
 			opacity: 1;
@@ -179,16 +209,15 @@
 	}
 	.is-open &{
 		&:nth-child(1){
-			top: 3px;
-			transform: rotate(30deg);
+			top: 5px;
+			transform: rotate(32deg);
 		}
 		&:nth-child(2){
 			opacity: 0;
 		}
 		&:nth-child(3){
-			top: 3px;
-			transform: rotate(-30deg);
+			top: 5px;
+			transform: rotate(-32deg);
 		}
-	
 	}
 }

@@ -7,6 +7,7 @@
 :root{
 	--blue: #135097;
 	--white: #FFF;
+	--right-gray: #E6EDF3;
 }
 
 
@@ -20,6 +21,9 @@ body {
   background: $color-bg-1;
   font-family: $font-family;
   line-height: 1;
+	&.is-fixed{
+		overflow: hidden;
+	}
 }
 
 img {
