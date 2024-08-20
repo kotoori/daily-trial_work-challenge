@@ -406,20 +406,34 @@ address {
 }
 
 .p-footer__logo {
-	width: 50%;
+	width: 45%;
 	max-width: 33.4rem;
 }
 
 .p-footer__logo__link {
-	width: 50%;
-	max-width: 30.6rem;
+	width: 100%;
 }
 
 .p-footer__nav {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 2.3rem;
-	padding: 1.6rem 0;
+	display: flex;
+	gap: 0 6.4rem;
+	padding: 1.8rem 0;
+	width: 50%;
+	max-width: 30.7rem;
+}
+
+.p-footer__nav__list {
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.p-footer__nav__item {
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.p-footer__nav__item:not(:first-of-type) {
+	margin-top: 2.4rem;
 }
 
 .p-footer__nav__link {
@@ -432,7 +446,7 @@ address {
 
 .p-footer_copyright {
 	display: block;
-	margin-top: 2.2rem;
+	margin-top: 2rem;
 	color: var(--light-gray, #E6EDF3);
 	font-style: normal;
 	font-weight: 300;
@@ -657,6 +671,41 @@ address {
 
 .c-btn {
 	font-size: 1.8rem;
+}
+
+.p-footer {
+	padding: 4.3rem 0 2.8rem;
+}
+
+.p-footer__content {
+	flex-direction: column;
+}
+
+.p-footer__logo {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 23.4rem;
+}
+
+.p-footer__nav {
+	justify-content: space-between;
+	gap: 0 2rem;
+	margin: 2rem auto 0;
+	width: 100%;
+	max-width: 28.2rem;
+}
+
+.p-footer__nav__item:not(:first-of-type) {
+	margin-top: 3.2rem;
+}
+
+.p-footer_copyright {
+	margin-top: 1.7rem;
+}
+
+.p-footer__note {
+	margin-top: 4rem;
+	text-align: left;
 }
 
 .u-sm-down {
