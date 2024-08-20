@@ -1,0 +1,17 @@
+@use "global" as *;
+@use "sass:map";
+
+.l-header{
+	height: $size-header-height-init;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: map.get($layer, "header");
+	&.is-scroll{
+		height: $size-header-height-pc;
+		@include mq(sm){
+			height: $size-header-height-sp;
+		}
+	}
+}

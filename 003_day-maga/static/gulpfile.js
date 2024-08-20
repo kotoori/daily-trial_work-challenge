@@ -160,6 +160,16 @@ function watch(){
 	gulp.watch("./src/assets/fonts/**/*", gulp.series(copyFonts, browserReload)); //フォントファイルの監視
 }
 
+//sassコンパイルの自動実行 ブラウザリロードなし
+function watch2(){
+	gulp.watch("./src/**/*.html", gulp.series(copyHTML));	//htmlファイルの監視
+	gulp.watch("./src/assets/sass/**/*.scss", gulp.series(copySass, compileSass));	//scssファイルの監視
+	gulp.watch("./src/assets/css/**/*.css", gulp.series(copyCSS)); //cssファイルの監視
+	gulp.watch("./src/assets/js/**/*.js", gulp.series(copyJS)); //jsファイルの監視
+	gulp.watch("./src/assets/img/**/*", gulp.series(copyImg)); //imgファイルの監視
+	gulp.watch("./src/assets/fonts/**/*", gulp.series(copyFonts)); //フォントファイルの監視
+}
+
 /*===============================
 ビルド
 ===============================*/
@@ -179,5 +189,6 @@ function build(done){
 ===============================*/
 
 exports.dev = gulp.parallel(build, browserInit, watch);
+exports.dev2 = gulp.parallel(build, browserInit, watch2);
 
 exports.build = gulp.parallel(copyHTML, copySass, compileSass, copyCSS, copyJS, copyImg, copyFonts)

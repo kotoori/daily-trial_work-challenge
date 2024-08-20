@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.u-sm-down{
+	display: none;
+	@include mq(sm){
+		display: unset;
+	}
+}
+
+.u-md-up{
+	display: none;
+	@include mq(md-up){
+		display: unset;
+	}
+}
