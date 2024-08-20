@@ -28,6 +28,12 @@
 	}
 }
 
+.u-lg-up{
+	display: none;
+	@include mq(lg-up){
+		display: inherit;
+	}
+}
 
 .u-elg-up{
 	display: none;

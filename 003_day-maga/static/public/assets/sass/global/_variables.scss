@@ -16,6 +16,7 @@ $breakpoints: (
   'lg-up': 'screen and (min-width: #{$lg})',
   'lg-down': 'screen and (max-width: #{$lg - 1px})',
   'elg-up': 'screen and (min-width: #{$elg})',
+  'elg-down': 'screen and (max-width: #{$elg - 1px})',
   ) !default;
 
 //メディア特性(hover)
