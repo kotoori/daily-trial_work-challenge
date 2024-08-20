@@ -5,13 +5,14 @@
 	justify-content: space-between;
 	position: relative;
 	.is-scroll &{
-		background: var(--right-gray, #E6EDF3);
+		background: var(--light-gray, #E6EDF3);
 	}
 }
 
 .p-header__logo{
 	margin: 3.2rem 0 0 4.8rem;
 	width: 26rem;
+	max-width: 100%;
 	@include mq(lg-down){
 		margin: 3.2rem 0 0 2.0rem;
 	}
