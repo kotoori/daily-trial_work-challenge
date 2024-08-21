@@ -81,7 +81,7 @@
 	}
 }
 
-.__newest__inner{
+.p-top__newest__inner{
 	@include mq(sm-down){
 		max-width: calc(30.2rem + 2rem * 2);
 		margin: 0 auto;
@@ -131,5 +131,64 @@
 	@include mq(sm-down){
 		width: 16.1rem;
 		margin: 3.2rem 0 0 auto;
+	}
+}
+
+/////////////////////////////
+/// popular
+/////////////////////////////
+
+.p-top__popular{
+	padding: 6.4rem 0;
+	background: #629DE2 url(../img/top/bg_popular.webp) no-repeat center center / cover;
+	overflow: hidden;
+}
+
+.p-top__popular__inner{
+	width: calc(1094px / 2 - 30px + 50vw);
+}
+
+.p-top__popular__title{
+
+}
+
+
+.p-top__popular__cards{
+	margin-top: 3.6rem;
+	box-sizing: border-box;
+}
+
+.p-top__popular__card{
+}
+
+
+.p-top__popular__swiper{
+	overflow: visible;
+	.swiper-button-prev, .swiper-button-next{
+		top: 50%;
+		width: 3.6rem;
+		height: 3.6rem;
+		@include hs(hp){
+			transition: all 0.3s ease 0s;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+		@include hs(hi){
+			&:active{
+				opacity: 0.8;
+			}
+		}
+		&::after{
+			display: none;
+		}
+	}
+	.swiper-button-prev{
+		
+	}
+	.swiper-button-next{
+	
+	}
+	.swiper-scrollbar{
 	}
 }

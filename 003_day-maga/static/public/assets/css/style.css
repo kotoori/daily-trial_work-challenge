@@ -704,6 +704,37 @@ address {
 	max-width: 100%;
 }
 
+.p-top__popular {
+	background: #629DE2 url(../img/top/bg_popular.webp) no-repeat center center/cover;
+	padding: 6.4rem 0;
+	overflow: hidden;
+}
+
+.p-top__popular__inner {
+	width: calc(517px + 50vw);
+}
+
+.p-top__popular__cards {
+	box-sizing: border-box;
+	margin-top: 3.6rem;
+}
+
+.p-top__popular__swiper {
+	overflow: visible;
+}
+
+.p-top__popular__swiper .swiper-button-prev,
+.p-top__popular__swiper .swiper-button-next {
+	top: 50%;
+	width: 3.6rem;
+	height: 3.6rem;
+}
+
+.p-top__popular__swiper .swiper-button-prev::after,
+.p-top__popular__swiper .swiper-button-next::after {
+	display: none;
+}
+
 .u-sm-down {
 	display: none;
 }
@@ -795,6 +826,16 @@ address {
 	opacity: 0.8;
 }
 
+.p-top__popular__swiper .swiper-button-prev,
+.p-top__popular__swiper .swiper-button-next {
+	transition: all 0.3s ease 0s;
+}
+
+.p-top__popular__swiper .swiper-button-prev:hover,
+.p-top__popular__swiper .swiper-button-next:hover {
+	opacity: 0.8;
+}
+
 }
 
 @media (hover: none) {
@@ -836,6 +877,11 @@ address {
 
 .p-top__fv__swiper .swiper-button-next:active,
 .p-top__fv__swiper .swiper-button-prev:active {
+	opacity: 0.8;
+}
+
+.p-top__popular__swiper .swiper-button-prev:active,
+.p-top__popular__swiper .swiper-button-next:active {
 	opacity: 0.8;
 }
 
@@ -1095,7 +1141,7 @@ address {
 	padding: 4.8rem 0 4rem;
 }
 
-.__newest__inner {
+.p-top__newest__inner {
 	margin: 0 auto;
 	max-width: 34.2rem;
 }
