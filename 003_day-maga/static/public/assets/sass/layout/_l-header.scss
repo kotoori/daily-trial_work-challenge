@@ -10,7 +10,7 @@
 	z-index: map.get($layer, "header");
 	&.is-scroll{
 		height: $size-header-height-pc;
-		@include mq(sm){
+		@include mq(md-down){
 			height: $size-header-height-sp;
 		}
 	}

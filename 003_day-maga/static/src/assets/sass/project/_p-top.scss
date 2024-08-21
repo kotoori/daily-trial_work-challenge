@@ -1,2 +1,52 @@
 @use "global" as *;
 
+/////////////////////////////
+/// FV
+/////////////////////////////
+.p-top__fv{
+	padding-top: 2.4rem;
+}
+
+.p-top__fv__cards{
+
+}
+
+.p-top__fv__card{
+	width: 41.3889%;
+	margin: 4.0rem 3.2rem 0;
+	transition: all 0.3s ease 0s;
+	padding-bottom: 3rem;//box-shadowの分
+	&.swiper-slide-active{
+		margin-top: 0;
+	}
+}
+
+.p-top__fv__swiper{
+	.swiper-button-next, .swiper-button-prev{
+		top:50%;
+		translate: 0 -50%;
+		width: 3.6rem;
+		height: 3.6rem;
+		@include hs(hp){
+			transition: all 0.3s ease 0s;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+		@include hs(hi){
+			&:active{
+				opacity: 0.8;
+			}
+		}
+		&::after{
+			display: none;
+		}
+	}
+	.swiper-button-next{
+		right: calc(50% - (41.3889% / 2) - 4.2rem - 3.6rem);
+	}
+	.swiper-button-prev{
+		left: calc(50% - (41.3889% / 2) - 4.2rem - 3.6rem);
+	}
+}
+
