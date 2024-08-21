@@ -4,7 +4,11 @@
 /// FV
 /////////////////////////////
 .p-top__fv{
-	padding-top: 2.4rem;
+	margin-top: -1.6rem;
+	@include mq(md-down){
+		margin-top: 0;
+		padding-top: 1rem;
+	}
 }
 
 .p-top__fv__cards{
@@ -13,20 +17,30 @@
 
 .p-top__fv__card{
 	width: 41.3889%;
-	margin: 4.0rem 3.2rem 0;
+	max-width: 59.6rem;
+	margin: 4.0rem calc(6.4rem / 2) 0;
 	transition: all 0.3s ease 0s;
-	padding-bottom: 3rem;//box-shadowの分
+	padding-top: 4rem;//box-shadowの分
+	padding-bottom: 5rem;//box-shadowの分
+	@include mq(md-down){
+		width: 77.4359%;
+		max-width: 30.2rem;
+		margin: 1.2rem calc(1.6rem / 2) 0;
+	}
 	&.swiper-slide-active{
 		margin-top: 0;
 	}
 }
 
 .p-top__fv__swiper{
+	--btn-size: 3.6rem;
 	.swiper-button-next, .swiper-button-prev{
-		top:50%;
-		translate: 0 -50%;
-		width: 3.6rem;
-		height: 3.6rem;
+		top: 48%;
+		width: var(--btn-size);
+		height: var(--btn-size);
+		@include mq(md-down){
+			top:45%;
+		}
 		@include hs(hp){
 			transition: all 0.3s ease 0s;
 			&:hover{
@@ -43,10 +57,16 @@
 		}
 	}
 	.swiper-button-next{
-		right: calc(50% - (41.3889% / 2) - 4.2rem - 3.6rem);
+		right: calc(50% - (min(41.3889%, 59.6rem) / 2) - 4.2rem - var(--btn-size));
+		@include mq(md-down){
+			right: calc(50% - (min(77.4359%, 30.2rem) / 2) - var(--btn-size));
+		}
 	}
 	.swiper-button-prev{
-		left: calc(50% - (41.3889% / 2) - 4.2rem - 3.6rem);
+		left: calc(50% - (min(41.3889%, 59.6rem) / 2) - 4.2rem - var(--btn-size));
+		@include mq(md-down){
+			left: calc(50% - (min(77.4359%, 30.2rem) / 2) - var(--btn-size));
+		}
 	}
 }
 

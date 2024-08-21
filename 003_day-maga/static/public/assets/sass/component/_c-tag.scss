@@ -17,6 +17,10 @@
 	&.--large{
 		font-size: 1.4rem;
 		line-height: 150%; /* 21px */
+		@include mq(md-down){
+			font-size: 1.2rem;
+			line-height: 180%; /* 21.6px */
+		}
 	}
 }
 
