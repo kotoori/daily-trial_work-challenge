@@ -715,6 +715,11 @@ address {
 	width: calc(517px + 50vw);
 }
 
+.p-top__popular__card {
+	width: 30.2rem;
+	max-width: 100%;
+}
+
 .p-top__popular__swiper {
 	margin-top: 4.4rem;
 	padding-bottom: 4.4rem;
@@ -731,6 +736,27 @@ address {
 .p-top__popular__swiper .swiper-button-prev::after,
 .p-top__popular__swiper .swiper-button-next::after {
 	display: none;
+}
+
+.p-top__popular__swiper .swiper-button-prev.swiper-button-disabled,
+.p-top__popular__swiper .swiper-button-next.swiper-button-disabled {
+	opacity: 0.5;
+}
+
+.p-top__popular__swiper .swiper-button-prev img,
+.p-top__popular__swiper .swiper-button-next img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.3s ease 0s;
+	width: 100%;
+	height: 100%;
+}
+
+.p-top__popular__swiper .swiper-button-prev img:last-of-type,
+.p-top__popular__swiper .swiper-button-next img:last-of-type {
+	visibility: hidden;
+	opacity: 0;
 }
 
 .p-top__popular__swiper .swiper-button-prev {
@@ -850,14 +876,16 @@ address {
 	opacity: 0.8;
 }
 
-.p-top__popular__swiper .swiper-button-prev,
-.p-top__popular__swiper .swiper-button-next {
-	transition: all 0.3s ease 0s;
+.p-top__popular__swiper .swiper-button-prev:hover img:first-of-type,
+.p-top__popular__swiper .swiper-button-next:hover img:first-of-type {
+	visibility: hidden;
+	opacity: 0;
 }
 
-.p-top__popular__swiper .swiper-button-prev:hover,
-.p-top__popular__swiper .swiper-button-next:hover {
-	opacity: 0.8;
+.p-top__popular__swiper .swiper-button-prev:hover img:last-of-type,
+.p-top__popular__swiper .swiper-button-next:hover img:last-of-type {
+	visibility: visible;
+	opacity: 1;
 }
 
 }
@@ -904,9 +932,16 @@ address {
 	opacity: 0.8;
 }
 
-.p-top__popular__swiper .swiper-button-prev:active,
-.p-top__popular__swiper .swiper-button-next:active {
-	opacity: 0.8;
+.p-top__popular__swiper .swiper-button-prev:active img:first-of-type,
+.p-top__popular__swiper .swiper-button-next:active img:first-of-type {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.p-top__popular__swiper .swiper-button-prev:active img:last-of-type,
+.p-top__popular__swiper .swiper-button-next:active img:last-of-type {
+	visibility: visible;
+	opacity: 1;
 }
 
 }
