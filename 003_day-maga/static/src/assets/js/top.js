@@ -22,8 +22,19 @@ const swiperPopular = new Swiper('.js-top-popular-swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: false,
-	slidesPerView: 3.19,
-	spaceBetween: 32,
+	slidesPerView: 1.15,
+	spaceBetween: 24,
+	breakpoints:{
+		750: {
+			slidesPerView: 2.5,
+			spaceBetween: 28,
+		},
+		950: {
+			slidesPerView: 3.19,
+			spaceBetween: 32,
+				}
+	},
+
 
   // Navigation arrows
   navigation: {
