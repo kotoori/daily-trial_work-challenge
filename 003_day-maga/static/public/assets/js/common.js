@@ -37,4 +37,31 @@ jQuery(window).on('scroll', function(){
 		jQuery('.l-header').removeClass('is-scroll');
 	}
 });
+
+/*===============================
+タブ切り替え
+===============================*/
+const tab = jQuery('.js-tab');
+let prevColor = '--lightblue2';
+jQuery(tab).on('click', function(){
+	//cardエリアの背景色を変更
+	const color = jQuery(this).data('color');
+	const target = jQuery(this).parents('.js-tab-parent').find('.js-tab-target')
+	console.log(prevColor);
+	target.removeClass(prevColor);
+	target.addClass(color);
+	prevColor = color;	//今回のcolorを記憶
+
+	//アクティブタブ切り替え
+	jQuery(this).parents('.js-tab-parent').find(tab).removeClass('is-active');
+	jQuery(this).addClass('is-active');
+});
+
+/*===============================
+記事表示の観点切り替え
+===============================*/
+jQuery('.js-point').on('click', function(){
+	jQuery('.js-point').removeClass('is-active');
+	jQuery(this).addClass('is-active');
+});
 });//jQuery End

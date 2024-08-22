@@ -45,3 +45,4 @@ const swiperPopular = new Swiper('.js-top-popular-swiper', {
     el: '.swiper-scrollbar',
   },
 });
+

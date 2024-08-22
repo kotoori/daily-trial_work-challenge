@@ -904,9 +904,29 @@ address {
 .p-top__all__card-area {
 	position: relative;
 	z-index: 10;
+	transition: background-color 0.3s ease 0s;
 	border-radius: 0 1.6rem 1.6rem 1.6rem;
-	background-color: var(--lightblue2, #F4F9FF);
 	padding: 3.2rem;
+}
+
+.p-top__all__card-area.--lightblue2 {
+	background-color: var(--lightblue2, #629DE2);
+}
+
+.p-top__all__card-area.--blue {
+	background-color: var(--blue, #135097);
+}
+
+.p-top__all__card-area.--coralblue {
+	background-color: var(--coralblue, #42A0AD);
+}
+
+.p-top__all__card-area.--purple2 {
+	background-color: var(--purple2, #9C8CFF);
+}
+
+.p-top__all__card-area.--purple {
+	background-color: var(--purple, #C88DEC);
 }
 
 .p-top__all__content__change {
@@ -1253,6 +1273,7 @@ address {
 .c-tab {
 	border-radius: 0 1.2rem 1.2rem 0;
 	writing-mode: vertical-rl;
+	text-orientation: upright;
 }
 
 .p-header__logo {
@@ -1379,15 +1400,23 @@ address {
 
 .p-top__all__tab-list {
 	display: flex;
+	flex-shrink: 0;
 	writing-mode: vertical-rl;
 }
 
 .p-top__all__card-area {
 	border-radius: 1.6rem 0 1.6rem 1.6rem;
+	padding: 2.2rem;
+	width: calc(100% - 3.6rem);
 }
 
 .p-top__all__card {
 	width: calc(50% - 1.6rem);
+}
+
+.p-top__all__btn {
+	margin-right: auto;
+	width: 16.1rem;
 }
 
 .u-md-down {
@@ -1417,6 +1446,18 @@ address {
 .c-btn {
 	padding: 0.6rem 2.6rem;
 	font-size: 1.8rem;
+}
+
+.c-btn-change .c-btn-change__item {
+	font-size: 1.4rem;
+}
+
+.c-tab {
+	padding-inline: 1.2rem 1.2rem;
+	padding-block: 0.6rem 0.4rem;
+	font-size: 1.4rem;
+	line-height: 115%; /* 16.1px */
+	letter-spacing: 0.08em;
 }
 
 .p-footer {
@@ -1483,13 +1524,38 @@ address {
 	width: 16.1rem;
 }
 
+.p-top__all {
+	padding: 4.8rem 0 6.4rem;
+}
+
+.p-top__all__content {
+	margin-top: 4.6rem;
+}
+
+.p-top__all__tab-list {
+	gap: 0.8rem;
+}
+
+.p-top__all__card-area {
+	padding: 1.2rem;
+	width: calc(100% - 2.7rem);
+}
+
+.p-top__all__content__change {
+	top: -2.6rem;
+	right: -1.8rem;
+}
+
+.p-top__all__cards {
+	gap: 1.2rem;
+}
+
 .p-top__all__card {
 	width: 100%;
 }
 
 .p-top__all__btn {
-	margin: 0 auto;
-	width: 16.1rem;
+	margin-top: 2rem;
 }
 
 .u-sm-down {

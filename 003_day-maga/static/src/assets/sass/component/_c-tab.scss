@@ -24,7 +24,15 @@
 	cursor: pointer;
 	@include mq(md-down){
 		writing-mode: vertical-rl;
+		text-orientation: upright;
 		border-radius: 0 1.2rem 1.2rem 0;
+	}
+	@include mq(sm-down){
+	font-size: 1.4rem;
+	line-height: 115%; /* 16.1px */
+	letter-spacing: 0.08em;
+	padding-block: 0.6rem 0.4rem;
+	padding-inline: 1.2rem  1.2rem;
 	}
 
 	&.--lightblue2{
