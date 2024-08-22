@@ -2,7 +2,7 @@
 
 .c-btn{
 	display: flex;
-	padding: 0.8rem 2.6rem;
+	padding: 0.6rem 2.6rem;
 	justify-content: center;
 	align-items: center;
 	gap: 1.6rem;
@@ -89,5 +89,37 @@
 		background: var(--blue, #135097);
 		color: var(--white, #FFF);
 	}
+}
 
+.c-btn-change{
+	display: flex;
+	.c-btn-change__item{
+		color: var(--Gray67, #676E87);
+		font-size: 1.8rem;
+		font-weight: 400;
+		line-height: 130%; /* 23.4px */
+		cursor: pointer;
+		&:not(:last-of-type){
+			padding-right: 1.2rem;
+		}
+		&:not(:first-of-type){
+			padding-left: 1.1rem;
+			border-left: 0.1rem solid var(--Gray67, #676E87);
+		}
+		@include hs(hp){
+			transition: all 0.3s ease 0s;
+			&:hover{
+				color: var(--blue, #135097);
+			}
+		}
+		@include hs(hi){
+			&:active{
+				color: var(--blue, #135097);
+			}
+		}
+		&.is-active{
+			color: var(--blue, #135097);
+			pointer-events: none;
+		}
+	}
 }

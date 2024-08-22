@@ -76,10 +76,12 @@ button {
 	--white: #FFF;
 	--light-gray: #E6EDF3;
 	--light-blue1: #DAEFF8;
+	--lightblue2: #629DE2;
 	--coralblue: #42A0AD;
 	--purple: #C88DEC;
 	--purple2: #9C8CFF;
 	--gray33333: #343436;
+	--Gray67: #676E87;
 	--white: #FFF;
 	--linegray: #DDE1F0;
 	--footer: #241919;
@@ -201,7 +203,7 @@ address {
 	border: 0.2rem solid var(--blue, #135097);
 	border-radius: 2rem 2rem 0px 2rem;
 	background: var(--blue, #135097);
-	padding: 0.8rem 2.6rem;
+	padding: 0.6rem 2.6rem;
 	color: var(--white, #FFF);
 	font-weight: 700;
 	font-size: 2rem;
@@ -255,6 +257,32 @@ address {
 .c-btn-cta--ptn2 .c-btn-cta__lower {
 	background: var(--blue, #135097);
 	color: var(--white, #FFF);
+}
+
+.c-btn-change {
+	display: flex;
+}
+
+.c-btn-change .c-btn-change__item {
+	cursor: pointer;
+	color: var(--Gray67, #676E87);
+	font-weight: 400;
+	font-size: 1.8rem;
+	line-height: 130%; /* 23.4px */
+}
+
+.c-btn-change .c-btn-change__item:not(:last-of-type) {
+	padding-right: 1.2rem;
+}
+
+.c-btn-change .c-btn-change__item:not(:first-of-type) {
+	border-left: 0.1rem solid var(--Gray67, #676E87);
+	padding-left: 1.1rem;
+}
+
+.c-btn-change .c-btn-change__item.is-active {
+	pointer-events: none;
+	color: var(--blue, #135097);
 }
 
 .c-tag,
@@ -413,6 +441,76 @@ address {
 .c-card.--large .c-card__tag {
 	gap: 1.8rem;
 	margin-top: 1.6rem;
+}
+
+.c-tab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	transition: all 0.3s;
+	cursor: pointer;
+	border-width: 0.1rem;
+	border-style: solid;
+	border-radius: 1.2rem 1.2rem 0 0;
+	background-color: #fff;
+	padding-inline: 2rem 2rem;
+	padding-block: 0.6rem 0.4rem;
+	width: -moz-fit-content;
+	width: fit-content;
+	font-weight: 500;
+	font-size: 1.6rem;
+	line-height: 150%; /* 24px */
+}
+
+.c-tab.--lightblue2 {
+	border-color: var(--lightblue2, #629DE2);
+	color: var(--lightblue2, #629DE2);
+}
+
+.c-tab.--blue {
+	border-color: var(--blue, #135097);
+	color: var(--blue, #135097);
+}
+
+.c-tab.--coralblue {
+	border-color: var(--coralblue, #42A0AD);
+	color: var(--coralblue, #42A0AD);
+}
+
+.c-tab.--purple2 {
+	border-color: var(--purple2, #9C8CFF);
+	color: var(--purple2, #9C8CFF);
+}
+
+.c-tab.--purple {
+	border-color: var(--purple, #C88DEC);
+	color: var(--purple, #C88DEC);
+}
+
+.c-tab.is-active {
+	pointer-events: none;
+	color: #FFF;
+}
+
+.c-tab.is-active.--lightblue2 {
+	background-color: var(--lightblue2, #629DE2);
+}
+
+.c-tab.is-active.--blue {
+	background-color: var(--blue, #135097);
+}
+
+.c-tab.is-active.--coralblue {
+	background-color: var(--coralblue, #42A0AD);
+}
+
+.c-tab.is-active.--purple2 {
+	background-color: var(--purple2, #9C8CFF);
+}
+
+.c-tab.is-active.--purple {
+	background-color: var(--purple, #C88DEC);
 }
 
 .p-header {
@@ -679,7 +777,7 @@ address {
 }
 
 .p-top__newest {
-	padding: 3.8rem 0;
+	padding: 3.8rem 0 4rem;
 }
 
 .p-top__newest__title {
@@ -707,7 +805,7 @@ address {
 
 .p-top__popular {
 	background: #629DE2 url(../img/top/bg_popular.webp) no-repeat center center/cover;
-	padding: 6.4rem 0;
+	padding: 6.4rem 0 6.6rem;
 	overflow: hidden;
 }
 
@@ -785,6 +883,55 @@ address {
 	height: 0.8rem;
 }
 
+.p-top__all {
+	padding: 6.4rem 0;
+}
+
+.p-top__all__content {
+	margin-top: 4.8rem;
+	width: 100%;
+}
+
+.p-top__all__tab-list {
+	display: flex;
+	position: relative;
+	justify-content: flex-start;
+	gap: 1rem;
+	z-index: 0;
+	margin-block-end: -0.2rem;
+}
+
+.p-top__all__card-area {
+	position: relative;
+	z-index: 10;
+	border-radius: 0 1.6rem 1.6rem 1.6rem;
+	background-color: var(--lightblue2, #F4F9FF);
+	padding: 3.2rem;
+}
+
+.p-top__all__content__change {
+	position: absolute;
+	top: -2.6rem;
+	right: 0.8rem;
+}
+
+.p-top__all__cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3.2rem;
+}
+
+.p-top__all__card {
+	width: calc(33.3333333333% - 2.1333333333rem);
+}
+
+.p-top__all__btn {
+	margin-top: 3.2rem;
+	margin-left: auto;
+	width: 17.2rem;
+	max-width: 100%;
+}
+
 .u-sm-down {
 	display: none;
 }
@@ -822,6 +969,14 @@ address {
 	opacity: 0.8;
 }
 
+.c-btn-change .c-btn-change__item {
+	transition: all 0.3s ease 0s;
+}
+
+.c-btn-change .c-btn-change__item:hover {
+	color: var(--blue, #135097);
+}
+
 .c-tag--link {
 	transition: all 0.3s ease 0s;
 }
@@ -836,6 +991,34 @@ address {
 
 .c-card__link:hover {
 	opacity: 0.8;
+}
+
+.c-tab {
+	transition: all 0.3s ease 0s;
+}
+
+.c-tab:hover {
+	color: #FFF;
+}
+
+.c-tab:hover.--lightblue2 {
+	background-color: var(--lightblue2, #629DE2);
+}
+
+.c-tab:hover.--blue {
+	background-color: var(--blue, #135097);
+}
+
+.c-tab:hover.--coralblue {
+	background-color: var(--coralblue, #42A0AD);
+}
+
+.c-tab:hover.--purple2 {
+	background-color: var(--purple2, #9C8CFF);
+}
+
+.c-tab:hover.--purple {
+	background-color: var(--purple, #C88DEC);
 }
 
 .p-header__nav__link {
@@ -903,12 +1086,40 @@ address {
 	opacity: 0.8;
 }
 
+.c-btn-change .c-btn-change__item:active {
+	color: var(--blue, #135097);
+}
+
 .c-tag--link:active {
 	opacity: 0.8;
 }
 
 .c-card__link:active {
 	opacity: 0.8;
+}
+
+.c-tab {
+	color: #FFF;
+}
+
+.c-tab.--lightblue2 {
+	background-color: var(--lightblue2, #629DE2);
+}
+
+.c-tab.--blue {
+	background-color: var(--blue, #135097);
+}
+
+.c-tab.--coralblue {
+	background-color: var(--coralblue, #42A0AD);
+}
+
+.c-tab.--purple2 {
+	background-color: var(--purple2, #9C8CFF);
+}
+
+.c-tab.--purple {
+	background-color: var(--purple, #C88DEC);
 }
 
 .p-header__nav__link:active {
@@ -1039,12 +1250,17 @@ address {
 	margin-top: 1.2rem;
 }
 
+.c-tab {
+	border-radius: 0 1.2rem 1.2rem 0;
+	writing-mode: vertical-rl;
+}
+
 .p-header__logo {
 	margin: 3.2rem 0 0 2rem;
 }
 
 .is-scroll .p-header__logo {
-	margin: 2rem 0 0 2.4rem;
+	margin: 2rem 0 1.93rem 2.4rem;
 	width: 16rem;
 }
 
@@ -1066,11 +1282,13 @@ address {
 .is-scroll .p-header__nav {
 	flex-direction: row;
 	gap: 2.4rem;
+	padding: 2rem 2.4rem 2rem;
 }
 
 .p-header__nav.is-open {
 	flex-direction: column;
 	gap: 3.2rem;
+	min-width: 16rem;
 }
 
 .p-header__nav__list {
@@ -1152,6 +1370,24 @@ address {
 
 .p-top__popular__swiper .swiper-button-next {
 	right: 0rem;
+}
+
+.p-top__all__content {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.p-top__all__tab-list {
+	display: flex;
+	writing-mode: vertical-rl;
+}
+
+.p-top__all__card-area {
+	border-radius: 1.6rem 0 1.6rem 1.6rem;
+}
+
+.p-top__all__card {
+	width: calc(50% - 1.6rem);
 }
 
 .u-md-down {
@@ -1244,6 +1480,15 @@ address {
 
 .p-top__newest__btn {
 	margin: 3.2rem 0 0 auto;
+	width: 16.1rem;
+}
+
+.p-top__all__card {
+	width: 100%;
+}
+
+.p-top__all__btn {
+	margin: 0 auto;
 	width: 16.1rem;
 }
 

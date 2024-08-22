@@ -21,7 +21,7 @@
 		margin: 2.9rem 0 0 4.8rem;
 		@include mq(md-down){
 			width: 16rem;
-			margin: 2.0rem 0 0 2.4rem;
+			margin: 2.0rem 0 1.93rem 2.4rem;
 		}
 	}
 }
@@ -72,10 +72,12 @@
 		.is-scroll &{
 			flex-direction: row;
 			gap: 2.4rem;
+			padding: 2.0rem 2.4rem 2.0rem;
 		}
 		&.is-open{
 			flex-direction: column;
 			gap: 3.2rem;
+			min-width: 16.0rem;
 		}
 	}
 }
