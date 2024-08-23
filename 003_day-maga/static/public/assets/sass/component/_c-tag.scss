@@ -27,14 +27,16 @@
 .c-tag--link{
 	@extend .c-tag;
 	@include hs(hp){
-		transition: all 0.3s ease 0s;
+		transition: all 0.4s ease;
 		&:hover{
-			opacity: 0.8;
+			background: var(--gray33333, #343436);		
+			color: var(--light-blue1, #DAEFF8);
 		}
 	}
 	@include hs(hi){
 		&:active{
-			opacity: 0.8;
+			background: var(--gray33333, #343436);		
+			color: var(--light-blue1, #DAEFF8);
 		}
 	}
 }

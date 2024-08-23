@@ -29,13 +29,22 @@ jQuery(function(){
 /*===============================
 スクロール検出
 ===============================*/
-jQuery(window).on('scroll', function(){
+const scrollCheck = () => {
 	const scroll = jQuery(window).scrollTop();
 	if(scroll > 10){
 		jQuery('.l-header').addClass('is-scroll');
 	}else{
 		jQuery('.l-header').removeClass('is-scroll');
 	}
+	return;
+}
+//ドキュメントロード時
+jQuery(function(){
+	scrollCheck();
+});
+//スクロール時
+jQuery(window).on('scroll', function(){
+	scrollCheck();
 });
 
 /*===============================
@@ -64,4 +73,27 @@ jQuery('.js-point').on('click', function(){
 	jQuery('.js-point').removeClass('is-active');
 	jQuery(this).addClass('is-active');
 });
+
+/*===============================
+スムーススクロール
+===============================*/
+jQuery('a[href^="#"]').on('click', function(e){
+	e.preventDefault();
+
+  let targetY = 0;
+  let href = jQuery(this).attr("href");
+  if(href === "#"){
+    targetY = jQuery('html').offset().top;
+  }else{
+    let headerHeight = jQuery('header').innerHeight();
+    targetY = jQuery(href).offset().top - headerHeight;
+  }
+
+  // animateで移動します
+  jQuery('html, body').animate({scrollTop : targetY}, 500, 'swing');
+
+	return false;
+});
+
+
 });//jQuery End
