@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.c-pagination{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.page-numbers{
+		color: var(--Gray67, #676E87);
+		font-size: 2rem;
+		font-weight: 400;
+		line-height: 140%; /* 28px */
+		letter-spacing: 0.15em;
+	}
+}
