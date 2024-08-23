@@ -213,14 +213,23 @@
 		font-weight: 700;
 		line-height: 150%; /* 24px */
 		border: 0.1rem solid var(--lightblue2, #629DE2);
+		padding: 8px 3px;
+		vertical-align: middle;
 		@include mq(sm-down){
 			font-size: 1.3rem
 		}
 	}
 	td{
 		border: 0.1rem solid var(--lightblue2, #629DE2);
+		color: var(--gray33333, #343436);
+		font-size: 1.6rem;
+		font-weight: 400;
+		line-height: 150%; /* 24px */
+		padding: 8px 3px;
+		vertical-align: middle;
 		@include mq(sm-down){
-			font-size: 1.3rem
+			font-size: 1.3rem;
+			padding: 6px 3px;
 		}
 	}
 	//memo

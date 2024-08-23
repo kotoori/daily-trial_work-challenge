@@ -1389,8 +1389,10 @@ address {
 }
 
 .p-single__content th {
+	vertical-align: middle;
 	border: 0.1rem solid var(--lightblue2, #629DE2);
 	background: var(--lightblue2, #629DE2);
+	padding: 8px 3px;
 	color: var(--white, #FFF);
 	font-weight: 700;
 	font-size: 1.6rem;
@@ -1398,7 +1400,13 @@ address {
 }
 
 .p-single__content td {
+	vertical-align: middle;
 	border: 0.1rem solid var(--lightblue2, #629DE2);
+	padding: 8px 3px;
+	color: var(--gray33333, #343436);
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 150%; /* 24px */
 }
 
 .p-single__content .memo {
@@ -2482,6 +2490,7 @@ address {
 }
 
 .p-single__content td {
+	padding: 6px 3px;
 	font-size: 1.3rem;
 }
 
