@@ -23,6 +23,19 @@
 			line-height: 160%; /* 20.8px */
 		}
 	}
+	&.--link{
+		@include hs(hp){
+			transition: all 0.3s ease 0s;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+		@include hs(hi){
+			&:active{
+				opacity: 0.8;
+			}
+		}
+	}
 }
 
 .c-category--blue{
