@@ -850,6 +850,7 @@ address {
 	display: flex;
 	position: relative;
 	justify-content: space-between;
+	height: 100%;
 }
 
 .is-scroll .p-header {
@@ -868,25 +869,39 @@ address {
 }
 
 .p-header__logo__link {
+	display: block;
+	position: relative;
 	width: 100%;
 }
 
 .p-header__logo__img {
 	display: block;
-	transition: all 0.3s ease 0s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s ease 0s;
 }
 
 .is-scroll .p-header__logo__img {
-	display: none;
+	visibility: hidden;
 	opacity: 0;
 }
 
 .p-header__logo__img--scroll {
-	display: none;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s ease 0s;
 }
 
 .is-scroll .p-header__logo__img--scroll {
-	display: block;
+	visibility: visible;
+	opacity: 1;
 }
 
 .p-header__nav {
@@ -1981,7 +1996,7 @@ address {
 @media screen and (max-width: 949px) {
 
 .l-header.is-scroll {
-	height: 68px;
+	height: 72px;
 }
 
 .c-tag.--large,
