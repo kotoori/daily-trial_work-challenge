@@ -180,7 +180,7 @@ address {
 	top: 50%;
 	left: 0;
 	translate: 0 -50%;
-	background: url("../img/common/icon-logo01.svg") no-repeat center center/contain;
+	background: url("../img/common/icon_logo01.svg") no-repeat center center/contain;
 	width: 7.2rem;
 	height: 3.8rem;
 	content: "";

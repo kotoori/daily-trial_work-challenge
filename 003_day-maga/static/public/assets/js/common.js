@@ -56,7 +56,6 @@ jQuery(tab).on('click', function(){
 	//cardエリアの背景色を変更
 	const color = jQuery(this).data('color');
 	const target = jQuery(this).parents('.js-tab-parent').find('.js-tab-target')
-	console.log(prevColor);
 	target.removeClass(prevColor);
 	target.addClass(color);
 	prevColor = color;	//今回のcolorを記憶
