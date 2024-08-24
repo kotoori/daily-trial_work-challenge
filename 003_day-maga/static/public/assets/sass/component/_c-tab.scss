@@ -20,6 +20,11 @@
 	@include mq(md-down){
 		writing-mode: vertical-rl;
 		text-orientation: upright;
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+		-webkit-text-orientation: upright;
+		text-orientation: upright;
+		word-break: break-all;
 		border-radius: 0 1.2rem 1.2rem 0;
 	}
 	@include mq(sm-down){
@@ -93,21 +98,23 @@
 		}
 	}
 	@include hs(hi){
-		color: #FFF;
-		&.--lightblue2{
-			background-color: var(--lightblue2, #629DE2);
-		}
-		&.--blue{
-			background-color: var(--blue, #135097);
-		}
-		&.--coralblue{
-			background-color: var(--coralblue, #42A0AD);
-		}
-		&.--purple2{
-			background-color: var(--purple2, #9C8CFF);
-		}
-		&.--purple{
-			background-color: var(--purple, #C88DEC);
+		&:active{
+			color: #FFF;
+			&.--lightblue2{
+				background-color: var(--lightblue2, #629DE2);
+			}
+			&.--blue{
+				background-color: var(--blue, #135097);
+			}
+			&.--coralblue{
+				background-color: var(--coralblue, #42A0AD);
+			}
+			&.--purple2{
+				background-color: var(--purple2, #9C8CFF);
+			}
+			&.--purple{
+				background-color: var(--purple, #C88DEC);
+			}
 		}
 	}
 }

@@ -1061,6 +1061,7 @@ address {
 	font-size: 1.6rem;
 	line-height: 120%; /* 19.2px */
 	letter-spacing: 0.05em;
+	white-space: nowrap;
 }
 
 .p-footer_copyright {
@@ -1891,27 +1892,27 @@ address {
 	opacity: 0.8;
 }
 
-.c-tab {
+.c-tab:active {
 	color: #FFF;
 }
 
-.c-tab.--lightblue2 {
+.c-tab:active.--lightblue2 {
 	background-color: var(--lightblue2, #629DE2);
 }
 
-.c-tab.--blue {
+.c-tab:active.--blue {
 	background-color: var(--blue, #135097);
 }
 
-.c-tab.--coralblue {
+.c-tab:active.--coralblue {
 	background-color: var(--coralblue, #42A0AD);
 }
 
-.c-tab.--purple2 {
+.c-tab:active.--purple2 {
 	background-color: var(--purple2, #9C8CFF);
 }
 
-.c-tab.--purple {
+.c-tab:active.--purple {
 	background-color: var(--purple, #C88DEC);
 }
 
@@ -2062,7 +2063,10 @@ address {
 .c-tab {
 	border-radius: 0 1.2rem 1.2rem 0;
 	writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
 	text-orientation: upright;
+	text-orientation: upright;
+	word-break: break-all;
 }
 
 .c-search__tag-list {
@@ -2105,6 +2109,7 @@ address {
 .c-archive__tab-list {
 	display: flex;
 	flex-shrink: 0;
+	width: 3.6rem;
 	writing-mode: vertical-rl;
 }
 
@@ -2371,6 +2376,7 @@ address {
 
 .c-archive__tab-list {
 	gap: 0.8rem;
+	width: 2.8rem;
 }
 
 .c-archive__card-area {
