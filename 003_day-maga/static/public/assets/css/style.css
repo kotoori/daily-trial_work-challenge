@@ -361,6 +361,21 @@ address {
 	color: var(--blue, #135097);
 }
 
+.c-btn-cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid var(--lightblue2, #629DE2);
+	border-radius: 1.6rem;
+	background: var(--lightblue2, #629DE2);
+	padding: 1.4rem 3rem;
+	color: var(--white, #FFF);
+	font-weight: 500;
+	font-size: 2.4rem;
+	line-height: 130%; /* 31.2px */
+	letter-spacing: 0.08em;
+}
+
 .c-tag,
 .c-tag--link {
 	display: flex;
@@ -1543,6 +1558,79 @@ address {
 	max-width: 1060px;
 }
 
+.p-404 {
+	padding: 6.4rem 0;
+}
+
+.p-404__inner {
+	max-width: 1076px;
+}
+
+.p-404__content {
+	box-shadow: 0 2.4rem 6.4rem 0 rgba(0, 0, 0, 0.05);
+	border-radius: 2.4rem;
+	background: var(--white, #FFF);
+	padding: 4.8rem 8.8rem;
+}
+
+.p-404__logo {
+	margin: 0 auto;
+	width: 8.9143rem;
+	max-width: 100%;
+}
+
+.p-404__title {
+	margin-top: 4rem;
+	color: var(--blue, #135097);
+	font-weight: 700;
+	font-size: 3.4rem;
+	line-height: 180%; /* 61.2px */
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+.p-404__num {
+	margin-top: 2rem;
+	color: var(--lightblue2, #629DE2);
+	font-weight: 900;
+	font-size: 10rem;
+	line-height: 100%; /* 100px */
+	font-family: "Noto Sans JP";
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+.p-404__lead {
+	margin-top: 5.2rem;
+	color: var(--gray33333, #343436);
+	font-weight: 700;
+	font-size: 2.4rem;
+	line-height: 180%; /* 43.2px */
+	font-family: "Zen Maru Gothic", serif;
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+.p-404__note {
+	margin-top: 3.2rem;
+	color: var(--gray33333, #343436);
+	font-weight: 500;
+	font-size: 2rem;
+	line-height: 180%; /* 36px */
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+.p-404__btn {
+	margin: 3.2rem auto 0;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.p-404__search {
+	padding: 6.4rem 0 0;
+}
+
 .u-sm-down {
 	display: none;
 }
@@ -2135,6 +2223,14 @@ address {
 	padding: 4rem 0 0;
 }
 
+.p-404__content {
+	padding: 3rem 5rem;
+}
+
+.p-404__search {
+	padding: 4rem 0 0;
+}
+
 .u-md-down {
 	display: inherit;
 }
@@ -2192,6 +2288,10 @@ address {
 }
 
 .c-btn-change .c-btn-change__item {
+	font-size: 1.4rem;
+}
+
+.c-btn-cont {
 	font-size: 1.4rem;
 }
 
@@ -2457,6 +2557,32 @@ address {
 .p-single__tags {
 	flex-direction: column;
 	gap: 0.8rem;
+}
+
+.p-404 {
+	padding: 4.8rem 0;
+}
+
+.p-404__content {
+	padding: 2rem 2rem 4.6rem;
+}
+
+.p-404__title {
+	font-size: 2.4rem;
+}
+
+.p-404__num {
+	font-size: 8rem;
+}
+
+.p-404__lead {
+	font-size: 2rem;
+	text-align: left;
+}
+
+.p-404__note {
+	font-size: 1.5rem;
+	text-align: left;
 }
 
 .u-sm-down {

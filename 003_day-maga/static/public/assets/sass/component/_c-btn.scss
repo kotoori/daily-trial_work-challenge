@@ -226,3 +226,21 @@
 		}
 	}
 }
+
+.c-btn-cont{
+	display: flex;
+	padding: 1.4rem 3.0rem;
+	justify-content: center;
+	align-items: center;
+	border-radius: 1.6rem;
+	border: 2px solid var(--lightblue2, #629DE2);
+	background: var(--lightblue2, #629DE2);
+	color: var(--white, #FFF);
+	font-size: 2.4rem;
+	font-weight: 500;
+	line-height: 130%; /* 31.2px */
+	letter-spacing: 0.08em;
+	@include mq(sm-down){
+		font-size: 1.4rem;
+	}
+}
