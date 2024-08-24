@@ -368,7 +368,7 @@ address {
 	border: 2px solid var(--lightblue2, #629DE2);
 	border-radius: 1.6rem;
 	background: var(--lightblue2, #629DE2);
-	padding: 1.4rem 3rem;
+	padding: 1.3rem 2.9rem;
 	color: var(--white, #FFF);
 	font-weight: 500;
 	font-size: 2.4rem;
@@ -1628,6 +1628,10 @@ address {
 
 .p-404__search {
 	padding: 6.4rem 0 0;
+}
+
+.p-404__search__inner {
+	max-width: 1060px;
 }
 
 .u-sm-down {
