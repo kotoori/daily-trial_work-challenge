@@ -1305,6 +1305,14 @@ address {
 	margin-top: 3.2rem;
 }
 
+.p-single__content {
+	color: var(--gray33333, #343436);
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 200%; /* 30px */
+	letter-spacing: 0.15em;
+}
+
 .p-single__content h2 {
 	margin: 2rem 0;
 	border-bottom: 2px solid var(--lightblue2, #629DE2);
@@ -1556,10 +1564,6 @@ address {
 	width: calc(517px + 50vw);
 }
 
-.p-single__popular__title {
-	letter-spacing: 0.1em;
-}
-
 .p-single__popular__contents {
 	margin-top: 4.4rem;
 }
@@ -1698,6 +1702,15 @@ address {
 
 .c-btn-change .c-btn-change__item:hover {
 	color: var(--blue, #135097);
+}
+
+.c-btn-cont {
+	transition: all 0.3s ease 0s;
+}
+
+.c-btn-cont:hover {
+	background: var(--white, #FFF);
+	color: var(--lightblue2, #629DE2);
 }
 
 .c-tag--link {
@@ -1854,6 +1867,11 @@ address {
 
 .c-btn-change .c-btn-change__item:active {
 	color: var(--blue, #135097);
+}
+
+.c-btn-cont:active {
+	background: var(--white, #FFF);
+	color: var(--lightblue2, #629DE2);
 }
 
 .c-tag--link:active {
@@ -2232,6 +2250,10 @@ address {
 	padding: 9rem 0 0;
 }
 
+.p-single__popular__title {
+	letter-spacing: 0.1em;
+}
+
 .p-single__popular__contents {
 	margin-top: 9.6rem;
 	padding-bottom: 2.4rem;
@@ -2513,6 +2535,12 @@ address {
 
 .p-single__content {
 	margin-top: 2rem;
+}
+
+.p-single__content {
+	font-size: 1.4rem;
+	line-height: 180%; /* 25.2px */
+	letter-spacing: 0.1em;
 }
 
 .p-single__content h2 {

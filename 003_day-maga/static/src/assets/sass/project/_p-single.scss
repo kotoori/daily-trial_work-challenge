@@ -87,6 +87,17 @@
 /////////////////////////////
 
 .p-single__content{
+	color: var(--gray33333, #343436);
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 200%; /* 30px */
+	letter-spacing: 0.15em;
+	@include mq(sm-down){
+		font-size: 1.4rem;
+		line-height: 180%; /* 25.2px */
+		letter-spacing: 0.1em;
+	}
+
 	h2{
 		padding: 1.6rem 0;
 		color: var(--gray33333, #343436);
@@ -407,7 +418,9 @@
 }
 
 .p-single__popular__title{
-	letter-spacing: 0.1em
+	@include mq(md-down){
+		letter-spacing: 0.1em
+	}
 }
 
 .p-single__popular__contents{

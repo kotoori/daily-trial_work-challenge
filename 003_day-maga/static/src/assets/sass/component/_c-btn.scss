@@ -243,4 +243,17 @@
 	@include mq(sm-down){
 		font-size: 1.4rem;
 	}
+	@include hs(hp){
+		transition: all 0.3s ease 0s;
+		&:hover{
+			background: var(--white, #FFF);
+			color: var(--lightblue2, #629DE2);
+		}
+	}
+	@include hs(hi){
+		&:active{
+			background: var(--white, #FFF);
+			color: var(--lightblue2, #629DE2);
+		}
+	}
 }
