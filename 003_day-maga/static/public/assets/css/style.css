@@ -2230,10 +2230,6 @@ address {
 	padding: 6.5rem 5rem;
 }
 
-.p-404__search {
-	padding: 4rem 0 0;
-}
-
 .u-md-down {
 	display: inherit;
 }
@@ -2563,7 +2559,7 @@ address {
 }
 
 .p-404 {
-	padding: 4.8rem 0;
+	padding: 5rem 0;
 }
 
 .p-404__content {

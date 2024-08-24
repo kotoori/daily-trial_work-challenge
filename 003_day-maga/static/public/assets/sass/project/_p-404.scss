@@ -3,7 +3,7 @@
 .p-404{
 	padding: 6.4rem 0;
 	@include mq(sm-down){
-		padding: 4.8rem 0;
+		padding: 5rem 0;
 
 	}
 }
@@ -94,9 +94,6 @@
 
 .p-404__search{
 	padding: 6.4rem 0 0;
-	@include mq(md-down){
-		padding: 4.0rem 0 0;
-	}
 }
 
 .p-404__search__inner{
