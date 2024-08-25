@@ -67,6 +67,9 @@
 	font-weight: 700;
 	line-height: 180%; /* 43.2px */
 	letter-spacing: 0.1em;
+	@include mq(md-down){
+		font-size: 2rem;
+	}
 	@include mq(sm-down){
 		font-size: 2rem;
 		text-align: left;
@@ -81,6 +84,9 @@
 	font-weight: 500;
 	line-height: 180%; /* 36px */
 	letter-spacing: 0.1em;
+	@include mq(md-down){
+		font-size: 1.5rem;
+	}
 	@include mq(sm-down){
 		font-size: 1.5rem;
 		text-align: left;

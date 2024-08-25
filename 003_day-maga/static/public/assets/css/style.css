@@ -2272,6 +2272,14 @@ address {
 	padding: 6.5rem 5rem;
 }
 
+.p-404__lead {
+	font-size: 2rem;
+}
+
+.p-404__note {
+	font-size: 1.5rem;
+}
+
 .u-md-down {
 	display: inherit;
 }
