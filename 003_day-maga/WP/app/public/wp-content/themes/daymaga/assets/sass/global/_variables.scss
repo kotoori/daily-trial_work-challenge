@@ -1,0 +1,66 @@
+//ブレークポイント
+$elg: 1200px;
+$lg: 1024px;
+$md: 950px;
+$sm: 750px;
+
+$breakpoints: (
+  'sm': 'screen and (max-width: #{$sm - 1px})',//スマホ幅
+  'md':'screen and (min-width: #{$sm}) and (max-width: #{$md - 1px})',
+  'lg':'screen and (min-width: #{$md}) and (max-width: #{$lg - 1px})',
+  'elg':'screen and (min-width: #{$lg})',
+  'sm-up': 'screen and (min-width: #{$sm})',
+  'sm-down': 'screen and (max-width: #{$sm - 1px})',
+  'md-up': 'screen and (min-width: #{$md})',
+  'md-down': 'screen and (max-width: #{$md - 1px})',
+  'lg-up': 'screen and (min-width: #{$lg})',
+  'lg-down': 'screen and (max-width: #{$lg - 1px})',
+  'elg-up': 'screen and (min-width: #{$elg})',
+  'elg-down': 'screen and (max-width: #{$elg - 1px})',
+  ) !default;
+
+//メディア特性(hover)
+$hover-possibilities: (
+  'hp':'(hover: hover)', /* hover possible:hover指定できるPCを想定したスタイル */
+  'hi':'(hover: none)',  /* hover impossible:hoverが使えないタッチ端末を想定した装飾 */
+) !default;
+
+//font
+$font-family: "Noto Sans JP", sans-serif;
+$font-family2: "Zen Maru Gothic", serif;
+
+
+//color
+$color-base: #343436;
+$color-light: #FFF;
+$color-font-gray: #676E87;
+$color-font-blue: #135097;
+$color-font-light: #FFF;
+
+$color-tag-1: #DAEFF8;
+$color-tag-2: #343436;
+
+$color-cat-1: #629DE2;
+$color-cat-2: #135097;
+$color-cat-3: #42A0AD;
+$color-cat-4: #C88DEC;
+$color-cat-5: #9C8CFF;
+
+$color-accent-1: #135097;
+$color-accent-2: #629DE2;
+
+$color-bg-1: #E6EDF3;
+$color-bg-2: #629DE2;
+
+//size
+$size-header-height-init: 140px;
+$size-header-height-pc: 99px;
+$size-header-height-sp: 72px;
+$size-inner-width-pc: 1034px;
+
+// z-index
+$layer: (
+  header: 900, // ヘッダー
+  default: 0, //default
+);
+

@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.c-tag{
+	display: flex;
+	padding: 0.2rem 0.8rem;
+	justify-content: center;
+	align-items: center;
+	gap: 2.4rem;
+	border-radius: 2.4rem;
+	background: var(--light-blue1, #DAEFF8);
+	color: var(--gray33333, #343436);
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: 180%; /* 21.6px */
+	padding: 0.2rem 0.8rem;
+	width: fit-content;
+	&.--large{
+		font-size: 1.4rem;
+		line-height: 150%; /* 21px */
+		@include mq(md-down){
+			font-size: 1.2rem;
+			line-height: 180%; /* 21.6px */
+		}
+	}
+}
+
+.c-tag--link{
+	@extend .c-tag;
+	@include hs(hp){
+		transition: all 0.4s ease;
+		&:hover{
+			background: var(--gray33333, #343436);		
+			color: var(--light-blue1, #DAEFF8);
+		}
+	}
+	@include hs(hi){
+		&:active{
+			background: var(--gray33333, #343436);		
+			color: var(--light-blue1, #DAEFF8);
+		}
+	}
+}

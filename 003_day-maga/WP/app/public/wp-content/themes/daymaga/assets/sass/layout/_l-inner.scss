@@ -1,0 +1,11 @@
+@use "../global" as *;
+
+.l-inner{
+	width: 100%;
+	max-width: calc($size-inner-width-pc + 30px * 2);
+	padding: 0 30px;
+	margin: 0 auto;
+	@include mq(sm){
+		padding: 0 20px;
+	}
+}
