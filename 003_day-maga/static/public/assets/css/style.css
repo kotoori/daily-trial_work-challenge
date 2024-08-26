@@ -1556,6 +1556,12 @@ address {
 	gap: 0.8rem;
 }
 
+.p-single__btn {
+	margin-top: 2rem;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
 .p-single__popular {
 	padding: 6.4rem 0 0;
 	overflow: hidden;
