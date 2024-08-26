@@ -2,6 +2,7 @@
 	global $dir; 
 	global $category_info;
 
+	$location = get_query_var('location');
 	$not_in_ID = get_query_var('not_popular_ID');
 
 	$args = array(
@@ -67,20 +68,26 @@
 			</div>
 		<?php endwhile; endif;?><!-- hove_posts() -->
 		<?php wp_reset_postdata(); ?>
-
-
-
-
-
-
 	</div>
-	<div class="swiper-button-prev">
-		<img src="<?php echo $dir ;?>/assets/img/common/icon_arrow04-l.svg" alt="" width="48" height="48">
-		<img src="<?php echo $dir ;?>/assets/img/common/icon_arrow05-l.svg" alt="" width="48" height="48">
-	</div>
-	<div class="swiper-button-next">
-		<img src="<?php echo $dir ;?>/assets/img/common/icon_arrow04-r.svg" alt="" width="48" height="48">
-		<img src="<?php echo $dir ;?>/assets/img/common/icon_arrow05-r.svg" alt="" width="48" height="48">
-	</div>
+
+	<?php if($location == 'top'): ?>
+		<div class="swiper-button-prev">
+			<img src="<?php echo $dir ;?>/assets/img/top/icon_arrow02-l.svg" alt="" width="48" height="48" loading="lazy">
+			<img src="<?php echo $dir ;?>/assets/img/top/icon_arrow03-l.svg" alt="" width="48" height="48" loading="lazy">
+		</div>
+		<div class="swiper-button-next">
+			<img src="<?php echo $dir ;?>/assets/img/top/icon_arrow02-r.svg" alt="" width="48" height="48" loading="lazy">
+			<img src="<?php echo $dir ;?>/assets/img/top/icon_arrow03-r.svg" alt="" width="48" height="48" loading="lazy">
+		</div>
+	<?php else: ?>
+		<div class="swiper-button-prev">
+			<img src="<?php echo $dir ;?>/assets/img/common/icon_arrow04-l.svg" alt="" width="48" height="48">
+			<img src="<?php echo $dir ;?>/assets/img/common/icon_arrow05-l.svg" alt="" width="48" height="48">
+		</div>
+		<div class="swiper-button-next">
+			<img src="<?php echo $dir ;?>/assets/img/common/icon_arrow04-r.svg" alt="" width="48" height="48">
+			<img src="<?php echo $dir ;?>/assets/img/common/icon_arrow05-r.svg" alt="" width="48" height="48">
+		</div>
+	<?php endif; ?>
 	<div class="swiper-scrollbar"></div>
 </div>

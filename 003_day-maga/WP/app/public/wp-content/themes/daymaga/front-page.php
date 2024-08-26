@@ -188,121 +188,11 @@
 				<h2 class="p-top__popular__title c-heading--white">おすすめ記事</h2>
 				<div class="p-top__popular__contents">
 					<!-- Slider main container -->
-					<div class="swiper c-popular__swiper js-popular-swiper">
-						<!-- Additional required wrapper -->
-						<div class="swiper-wrapper c-popular__cards">
-							<!-- Slides -->
-							<div class="swiper-slide c-popular__card">
-								<article class="c-card">
-									<a href="#" class="c-card__link">
-										<div class="c-card__img">
-											<img src="<?php echo $dir ;?>/assets/img/card/img_card01.webp" alt="" width="1080" height="612">
-										</div>
-										<time class="c-card__date" datetime="2024-07-31">2024.07.31</time>
-										<div class="c-card__title">金融業界のデジタル化：コンサルファームが解説する課題と解決策</div>
-										<div class="c-card__category ">
-											<div class="c-category--purple">ニュース</div>
-										</div>
-										<ul class="c-card__tag ">
-											<li class="c-card__tag__item c-tag">#コンサルファーム</li>
-											<li class="c-card__tag__item c-tag">#IT</li>
-											<li class="c-card__tag__item c-tag">#金融・保険</li>
-											<li class="c-card__tag__item c-tag">#Pickup</li>
-										</ul>
-									</a>
-								</article>
-							</div>
-							<div class="swiper-slide c-popular__card">
-								<article class="c-card">
-									<a href="#" class="c-card__link">
-										<div class="c-card__img">
-											<img src="<?php echo $dir ;?>/assets/img/card/img_card02.webp" alt="" width="1080" height="612">
-										</div>
-										<time class="c-card__date" datetime="2024-07-28">2024.07.28</time>
-										<div class="c-card__title">人材育成の新潮流：コンサルティングがもたらす効果的なトレーニング手法</div>
-										<div class="c-card__category ">
-											<div class="c-category--coralblue">TIPS</div>
-										</div>
-										<ul class="c-card__tag ">
-											<li class="c-card__tag__item c-tag">#コンサルファーム</li>
-											<li class="c-card__tag__item c-tag">#共通</li>
-											<li class="c-card__tag__item c-tag">#HR</li>
-											<li class="c-card__tag__item c-tag">#Pickup</li>
-										</ul>
-									</a>
-								</article>
-							</div>
-							<div class="swiper-slide c-popular__card">
-								<article class="c-card">
-									<a href="#" class="c-card__link">
-										<div class="c-card__img">
-											<img src="<?php echo $dir ;?>/assets/img/card/img_card03.webp" alt="" width="1080" height="612">
-										</div>
-										<time class="c-card__date" datetime="2024-07-25">2024.07.25</time>
-										<div class="c-card__title">Big Fourが新たなデジタルイノベーションラボを設立、業界に変革をもたらす</div>
-										<div class="c-card__category ">
-											<div class="c-category--purple">ニュース</div>
-										</div>
-										<ul class="c-card__tag ">
-											<li class="c-card__tag__item c-tag">#コンサルファーム</li>
-											<li class="c-card__tag__item c-tag">#共通</li>
-											<li class="c-card__tag__item c-tag">#IT</li>
-											<li class="c-card__tag__item c-tag">#Pickup</li>
-										</ul>
-									</a>
-								</article>
-							</div>
-							<div class="swiper-slide c-popular__card">
-								<article class="c-card">
-									<a href="#" class="c-card__link">
-										<div class="c-card__img">
-											<img src="<?php echo $dir ;?>/assets/img/card/img_card04.webp" alt="" width="1080" height="612">
-										</div>
-										<time class="c-card__date" datetime="2024-07-17">2024.07.17</time>
-										<div class="c-card__title">リーダーシップの発展に向けたコンサルティングの重要性</div>
-										<div class="c-card__category ">
-											<div class="c-category--blue">新着情報</div>
-										</div>
-										<ul class="c-card__tag ">
-											<li class="c-card__tag__item c-tag">#コンサルファーム</li>
-											<li class="c-card__tag__item c-tag">#M&A・事業再生</li>
-											<li class="c-card__tag__item c-tag">#その他</li>
-											<li class="c-card__tag__item c-tag">#Pickup</li>
-										</ul>
-									</a>
-								</article>
-							</div>
-							<div class="swiper-slide c-popular__card">
-								<article class="c-card">
-									<a href="#" class="c-card__link">
-										<div class="c-card__img">
-											<img src="<?php echo $dir ;?>/assets/img/card/img_card05.webp" alt="" width="1080" height="612">
-										</div>
-										<time class="c-card__date" datetime="2024-07-15">2024.07.15</time>
-										<div class="c-card__title">フリーコンサルの現場から〜活動の実態と成功のポイント</div>
-										<div class="c-card__category ">
-											<div class="c-category--coralblue">TIPS</div>
-										</div>
-										<ul class="c-card__tag ">
-											<li class="c-card__tag__item c-tag">#コンサルファーム</li>
-											<li class="c-card__tag__item c-tag">#共通</li>
-											<li class="c-card__tag__item c-tag">#その他</li>
-											<li class="c-card__tag__item c-tag">#Pickup</li>
-										</ul>
-									</a>
-								</article>
-							</div>
-						</div>
-						<div class="swiper-button-prev">
-							<img src="<?php echo $dir ;?>/assets/img/top/icon_arrow02-l.svg" alt="" width="48" height="48" loading="lazy">
-							<img src="<?php echo $dir ;?>/assets/img/top/icon_arrow03-l.svg" alt="" width="48" height="48" loading="lazy">
-						</div>
-						<div class="swiper-button-next">
-							<img src="<?php echo $dir ;?>/assets/img/top/icon_arrow02-r.svg" alt="" width="48" height="48" loading="lazy">
-							<img src="<?php echo $dir ;?>/assets/img/top/icon_arrow03-r.svg" alt="" width="48" height="48" loading="lazy">
-						</div>
-						<div class="swiper-scrollbar"></div>
-					</div>
+					<?php
+						set_query_var('location', 'top');
+						set_query_var('not_popular_ID', array());
+						get_template_part('template-parts/popular');
+					?>
 				</div>
 			</div>
 		</section>
@@ -506,29 +396,7 @@
 		</section>
 		<div class="p-top__search" id="a-search">
 			<div class="l-inner">
-				<div class="c-search">
-					<div class="c-search__title">キーワードで絞り込む</div>
-					<ul class="c-search__tag-list">
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#コンサルファーム</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#クライアント</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#共通</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#戦略</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#IT</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#業務改善</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#HR</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#M&A・事業再生</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#金融・保険</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#メーカー</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#商社</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#不動産・建設・設備</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#サービス</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#物流</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#流通</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#その他</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#広告・マスコミ</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#Pickup</a></li>
-					</ul>
-				</div>
+				<?php get_template_part('template-parts/tag-list'); ?>
 			</div>
 		</div>
 	</main>

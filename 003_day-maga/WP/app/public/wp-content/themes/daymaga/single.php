@@ -57,13 +57,18 @@
 					<h2 class="p-single__popular__title c-heading">おすすめ記事</h2>
 					<div class="p-single__popular__contents">
 						<?php
+							set_query_var('location', 'single');
 							set_query_var('not_popular_ID', get_the_ID());
 							get_template_part('template-parts/popular');
 						?>
 					</div>
 				</div>
 			</section>
-			<?php get_template_part('template-parts/tag-list'); ?>
+			<div class="p-single__search" id="a-search">
+				<div class="l-inner p-single__search__inner">
+					<?php get_template_part('template-parts/tag-list'); ?>
+				</div>
+			</div>
 		</div>
 	</main>
 	<?php endwhile; endif;?><!-- hove_posts() -->
