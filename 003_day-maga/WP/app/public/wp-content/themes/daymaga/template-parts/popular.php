@@ -1,25 +1,13 @@
 <?php 
 	global $dir; 
 	global $category_info;
+	global $pickup_args;
 
 	$location = get_query_var('location');
 	$not_in_ID = get_query_var('not_popular_ID');
-
-	$args = array(
-		'post_type' => 'post',
-		'posts_per_page' => 5,
-		'orderby' => 'date',
-		'order'          => 'DESC',
-		'post__not_in'   => array($not_in_ID), // 特定の投稿を除外
-		'tax_query'      => array(
-			array(
-				'taxonomy' => 'post_tag',
-				'field'    => 'slug',
-				'terms'    => 'pickup'
-			)
-		)
-	);
-	$the_query = new WP_Query($args);
+	$pickup_args['posts_per_page'] = 5;
+	$pickup_args['post__not_in'] = array($not_in_ID);
+	$the_query = new WP_Query($pickup_args);
 ?>
 
 
@@ -55,7 +43,7 @@
 							<div class="c-category--<?php echo $category_color; ?>"><?php echo $category_name; ?></div>
 						</div>
 						<ul class="c-card__tag">
-							<?php 
+							<?php
 								//タグ取得
 								$tags = get_tags_by_order(get_the_ID());
 								if($tags): foreach($tags as $tag):

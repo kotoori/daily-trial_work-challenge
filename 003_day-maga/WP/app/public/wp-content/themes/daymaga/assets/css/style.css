@@ -762,7 +762,7 @@ address {
 .c-archive__card-area {
 	position: relative;
 	z-index: 10;
-	transition: background-color 0.3s ease 0s;
+	transition: background-color 0.2s ease 0s;
 	border-radius: 0 1.6rem 1.6rem 1.6rem;
 	padding: 3.2rem;
 }

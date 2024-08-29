@@ -13,8 +13,16 @@
 		if ( is_front_page() || is_single() ) {
 			wp_enqueue_script( "swiper", "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", array(), false, true );
 			wp_enqueue_script( "my-popular", $dir."/assets/js/popular.js", array("jquery"), filemtime(get_theme_file_path('assets/js/popular.js')), true );
-		}if(is_front_page()){
+		}
+		if(is_front_page()){
 			wp_enqueue_script( "my-top", $dir."/assets/js/top.js", array("jquery"), filemtime(get_theme_file_path('assets/js/top.js')), true );
+		}
+		if(is_front_page() || is_home() || is_page('all') || is_archive()){
+			wp_enqueue_script( "my-ajax", $dir."/assets/js/ajax.js", array("jquery"), filemtime(get_theme_file_path('assets/js/ajax.js')), true );
+			wp_localize_script('my-ajax', 'ajax_params', array('ajax_url' => admin_url('admin-ajax.php'),
+																													'nonce' => wp_create_nonce('my-ajax-nonce'),
+																													'is_front_page' => is_front_page()));
+
 		}
 		wp_enqueue_script( "my-common", $dir."/assets/js/common.js", array("jquery"), filemtime(get_theme_file_path('assets/js/common.js')), true );
 	}

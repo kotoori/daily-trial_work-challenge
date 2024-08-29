@@ -1,5 +1,8 @@
 <?php 
 	global $dir;
+	global $for_consultant_cta_slug;
+	global $for_company_cta_slug;
+
 	if ( is_front_page() ) {
 		$logo_tag = "h1";
 	}else{
@@ -44,7 +47,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class();?>>
 	<!-- header -->
 	<header class="l-header">
 		<div class="p-header">
@@ -65,20 +68,20 @@
 					</span>
 				</button>
 				<ul class="p-header__nav__list">
-					<li class="p-header__nav__item"><a class="p-header__nav__link" href="#a-newest">新着情報</a></li>
-					<li class="p-header__nav__item"><a class="p-header__nav__link" href="#a-tips">TIPS</a></li>
-					<li class="p-header__nav__item"><a class="p-header__nav__link" href="#a-interview">インタビュー</a></li>
-					<li class="p-header__nav__item"><a class="p-header__nav__link" href="#a-news">ニュース</a></li>
+					<li class="p-header__nav__item"><a class="p-header__nav__link" href="<?php echo get_category_link_by_slug('new'); ?>">新着情報</a></li>
+					<li class="p-header__nav__item"><a class="p-header__nav__link" href="<?php echo get_category_link_by_slug('tips'); ?>">TIPS</a></li>
+					<li class="p-header__nav__item"><a class="p-header__nav__link" href="<?php echo get_category_link_by_slug('interview'); ?>">インタビュー</a></li>
+					<li class="p-header__nav__item"><a class="p-header__nav__link" href="<?php echo get_category_link_by_slug('news'); ?>">ニュース</a></li>
 				</ul>
 				<div class="p-header__nav__cta u-elg-up">
 					<div class="p-header__nav__btn">
-						<a href="#" class="c-btn-cta">
+						<a href="<?php echo $for_company_cta_slug; ?>" class="c-btn-cta">
 							<span class="c-btn-cta__upper">コンサルをお探しの企業様</span>
 							<span class="c-btn-cta__lower">まずは無料相談</span>
 						</a>
 					</div>
 					<div class="p-header__nav__btn">
-						<a href="#" class="c-btn-cta--ptn2">
+						<a href="<?php echo $for_consultant_cta_slug; ?>" class="c-btn-cta--ptn2">
 							<span class="c-btn-cta__upper">コンサルタントの方</span>
 							<span class="c-btn-cta__lower">案件の紹介登録</span>
 						</a>

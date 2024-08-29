@@ -68,8 +68,8 @@ jQuery(tab).on('click', function(){
 /*===============================
 記事表示の観点切り替え
 ===============================*/
-jQuery('.js-point').on('click', function(){
-	jQuery('.js-point').removeClass('is-active');
+jQuery('.js-order').on('click', function(){
+	jQuery('.js-order').removeClass('is-active');
 	jQuery(this).addClass('is-active');
 });
 

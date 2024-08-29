@@ -2,7 +2,7 @@
 //テーマカスタマイズ
 require_once locate_template('functions/theme_customize.php');
 //その他設定
-// require_once locate_template('functions/others.php');
+require_once locate_template('functions/others.php');
 //グローバル変数
 require_once locate_template('functions/globalparams.php');
 //共通関数

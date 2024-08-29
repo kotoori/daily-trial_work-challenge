@@ -1,5 +1,8 @@
 <?php	
 	global $dir;
+	global $about_slug;
+	global $company_slug;
+	global $rule_slug;
 ?>
 
 <?php get_template_part('template-parts/footer-cta'); ?>
@@ -14,15 +17,15 @@
 					</div>
 					<nav class="p-footer__nav">
 						<ul class="p-footer__nav__list">
-							<li class="p-footer__nav__item"><a href="" class="p-footer__nav__link">新着情報</a></li>
-							<li class="p-footer__nav__item"><a href="" class="p-footer__nav__link">TIPS</a></li>
-							<li class="p-footer__nav__item"><a href="" class="p-footer__nav__link">インタビュー</a></li>
-							<li class="p-footer__nav__item"><a href="" class="p-footer__nav__link">ニュース</a></li>
+							<li class="p-footer__nav__item"><a href="<?php echo get_category_link_by_slug('new'); ?>" class="p-footer__nav__link">新着情報</a></li>
+							<li class="p-footer__nav__item"><a href="<?php echo get_category_link_by_slug('tips'); ?>" class="p-footer__nav__link">TIPS</a></li>
+							<li class="p-footer__nav__item"><a href="<?php echo get_category_link_by_slug('interview'); ?>" class="p-footer__nav__link">インタビュー</a></li>
+							<li class="p-footer__nav__item"><a href="<?php echo get_category_link_by_slug('news'); ?>" class="p-footer__nav__link">ニュース</a></li>
 						</ul>
 						<ul class="p-footer__nav__list">
-							<li class="p-footer__nav__item"><a href="" class="p-footer__nav__link">DayMagaについて</a></li>
-							<li class="p-footer__nav__item"><a href="" class="p-footer__nav__link">運営会社</a></li>
-							<li class="p-footer__nav__item"><a href="" class="p-footer__nav__link">サイト利用規約</a></li>
+							<li class="p-footer__nav__item"><a href="<?php echo $about_slug; ?>" class="p-footer__nav__link">DayMagaについて</a></li>
+							<li class="p-footer__nav__item"><a href="<?php echo $company_slug; ?>" class="p-footer__nav__link">運営会社</a></li>
+							<li class="p-footer__nav__item"><a href="<?php echo $rule_slug; ?>" class="p-footer__nav__link">サイト利用規約</a></li>
 						</ul>
 					</nav>
 				</div>

@@ -44,10 +44,13 @@
 					<div class="p-single__tags">
 						<div class="p-single__tags__title">この記事のタグ</div>
 						<ul class="p-single__tags__list">
-							<li class="p-single__tags__item"><a class="c-tag--link" href="">#コンサルファーム</a></li>
-							<li class="p-single__tags__item"><a class="c-tag--link" href="">#共通</a></li>
-							<li class="p-single__tags__item"><a class="c-tag--link" href="">#その他</a></li>
-							<li class="p-single__tags__item"><a class="c-tag--link" href="">##Pickup</a></li>
+							<?php 
+								//タグ取得
+								$tags = get_tags_by_order(get_the_ID());
+								if($tags): foreach($tags as $tag):
+							?>
+								<li class="p-single__tags__item"><a class="c-tag--link" href="<?php echo get_tag_link($tag->term_id); ?>">#<?php echo $tag->name; ?></a></li>
+							<?php endforeach; endif;?>
 						</ul>
 					</div>
 				</div><!-- /.p-single__post -->
