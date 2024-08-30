@@ -10,6 +10,7 @@ function my_get_archive() {
 		$post_num = $_REQUEST['post_num'];
 		$page = $_REQUEST['page'];
 		$pageUrl = $_REQUEST['pageUrl'];
+		$tagId = $_REQUEST['tagId'];
 
 		//1ページあたりの記事数を指定
 		$args = array(
@@ -18,9 +19,15 @@ function my_get_archive() {
 			'paged' => $page,
 		);
 
-		//カテゴリーがall以外の場合はカテゴリーを指定
-		if($active_category != 'all'){
-			$args['category_name'] = $active_category;
+		if($tagId != -1){
+			//タグの場合
+			$args['tag_id'] = $tagId;
+		}else{
+			//カテゴリーの場合
+			//カテゴリーがall以外の場合はカテゴリーを指定
+			if($active_category != 'all'){
+				$args['category_name'] = $active_category;
+			}
 		}
 
 		//orderがviewsの場合はview数でソート
@@ -88,11 +95,15 @@ function my_get_archive() {
 						</article>
 					</div>';
 			};//endwhile
+		}else{
+			$post_cards = '<div class="c-card__nothing">投稿の準備中です。</div>';
 		};//hove_posts()
-		$pagination_base = $pageUrl . '/page/%#%/';
+
+		//ページネーション生成
 		$pagination =  paginate_links(array(
-			'base' => $pagination_base,
+			'base' => $pageUrl . '/page/%#%/',
 			'total' => $the_query->max_num_pages,
+			'current' => $page,
 			'end_size' => 0,
 			'mid_size' => 1,
 			'prev_next' => true,

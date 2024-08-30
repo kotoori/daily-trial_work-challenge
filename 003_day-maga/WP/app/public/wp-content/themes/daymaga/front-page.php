@@ -142,7 +142,6 @@
 							<?php
 								//全カテゴリーをID順に取得
 								$categories = get_categories_by_order();
-								// var_dump($categories);
 								if($categories): foreach($categories as $category):
 							?>
 								<li class="c-archive__tab-item"><button class="c-tab --<?php echo get_category_color($category->slug);?> js-tab" data-category="<?php echo $category->slug; ?>" data-color="--<?php echo get_category_color($category->slug); ?>"><?php echo $category->name; ?></button></li>

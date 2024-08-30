@@ -5,7 +5,6 @@ $('document').ready(function() {
 	const order = jQuery('.js-order');
 	let before_width = $(window).width();
 	let currentPage = 1;
-	const isFrontPage = ajax_params.is_front_page;
 
 
 	const get_post_num = () => {
@@ -17,9 +16,10 @@ $('document').ready(function() {
     }
 		return post_num;
 	}
-	const run_ajax = ({category, order, page=1}) => {
+	const run_ajax = ({category="all", order="date", page=1, tagId=-1}) => {
+		console.log(category + ' ' + order + ' ' + page);
 		const pageUrl = window.location.href;
-		console.log(pageUrl);
+		console.log(tagId);
 		$.ajax({
 			type: 'POST',
 			url: ajax_params.ajax_url,
@@ -31,6 +31,7 @@ $('document').ready(function() {
 				'post_num': get_post_num(),
 				'page': page,
 				'pageUrl': pageUrl,
+				'tagId': tagId,
 			},
 			dataType: 'json',
 			success: function( response ) {
@@ -40,11 +41,9 @@ $('document').ready(function() {
 				$('#js-archive__container').append(response.cards);
 
 				//もっと見るボタンのリンクを更新
-				console.log(response.link);
 				$('#js-archives-link').attr('href', response.link);
 
 				//ページネーションを更新
-				console.log(response.pagination);
 				$('#js-pagination').empty();
 				$('#js-pagination').append(response.pagination);
 			}
@@ -54,14 +53,20 @@ $('document').ready(function() {
 	//ロード時に初期表示
 	const init_category = jQuery('.js-tab.is-active').data('category');
 	const init_order = jQuery('.js-order.is-active').data('order');
-	args = {category: init_category, order: init_order, page: currentPage};
+	const args = {category: init_category, order: init_order, page: currentPage, tagId: ajax_params.tag_id};
+	if (ajax_params.tag_id != -1) {
+		console.log('tagId is set' + ajax_params.tagId);
+	}else{
+		console.log('tagId is not set');
+	}
 	run_ajax(args);
 
 	//カテゴリー切り替え
 	$(tab).on('click', function() {
 		const current_category = jQuery(this).data('category');
 		const current_order = jQuery('.js-order.is-active').data('order');
-		args = {category: current_category, order: current_order, page: currentPage};
+		console.log(current_category);
+		const args = {category: current_category, order: current_order, page: currentPage, tagId: ajax_params.tag_id};
 		run_ajax(args);
 	});
 
@@ -69,7 +74,7 @@ $('document').ready(function() {
 	$(order).on('click', function() {
 		const current_order = jQuery(this).data('order');
 		const current_category = jQuery('.js-tab.is-active').data('category');
-		args = {category: current_category, order: current_order, page: currentPage};
+		const args = {category: current_category, order: current_order, page: currentPage, tagId: ajax_params.tag_id};
 		run_ajax(args);
 		});
 
@@ -81,7 +86,7 @@ $('document').ready(function() {
 				(before_width < 950 && current_width >= 950) ) {
 			const current_category = jQuery('.js-tab.is-active').data('category');
 			const current_order = jQuery('.js-order.is-active').data('order');
-			args = {category: current_category, order: current_order, page: currentPage};
+			const args = {category: current_category, order: current_order, page: currentPage, tagId: ajax_params.tag_id};
 			run_ajax(args);
 			before_width = current_width;
 		}
@@ -93,18 +98,14 @@ $('document').ready(function() {
 		const current_order = jQuery('.js-order.is-active').data('order');
 
 		const pageLink = $(this).attr('href'); // リンクからページURLを取得
-		console.log("a: " + pageLink);
-		currentPage = pageLink.split('/').pop();//URLからページ番号を取得
-		console.log(currentPage);
+		const segments = pageLink.split('/');
+		let currentPage = segments[segments.length - 2];
 		if (currentPage.match(/[^0-9]/)) {
 			currentPage = 1;
 		}
-		args = {category: current_category, order: current_order, page: currentPage};
+		const args = {category: current_category, order: current_order, page: currentPage, tagId: ajax_params.tag_id};
 		run_ajax(args);
-
-		$('#js-pagination a').removeClass('current');
-		$(this).addClass('current');
-
+		jQuery('html, body').animate({scrollTop : 0}, 500, 'swing');
 	});
 });
 });//jQuery

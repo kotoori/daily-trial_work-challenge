@@ -15,8 +15,8 @@
 						<div class="c-archive__card-area js-tab-target --lightblue2">
 							<div class="c-archive__content__change">
 								<div class="c-btn-change">
-									<button class="c-btn-change__item is-active js-order">新着順</button>
-									<button class="c-btn-change__item js-order">人気順</button>
+									<button class="c-btn-change__item is-active js-order" data-order="date">新着順</button>
+									<button class="c-btn-change__item js-order" data-order="views">人気順</button>
 								</div>
 							</div>
 							<div class="c-archive__cards" id="js-archive__container">
@@ -84,29 +84,7 @@
 		</section>
 		<div class="p-archive__search" id="a-search">
 			<div class="l-inner">
-				<div class="c-search">
-					<div class="c-search__title">キーワードで絞り込む</div>
-					<ul class="c-search__tag-list">
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#コンサルファーム</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#クライアント</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#共通</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#戦略</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#IT</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#業務改善</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#HR</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#M&A・事業再生</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#金融・保険</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#メーカー</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#商社</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#不動産・建設・設備</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#サービス</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#物流</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#流通</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#その他</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#広告・マスコミ</a></li>
-						<li class="c-search__tag-item"><a class="c-tag--link" href="">#Pickup</a></li>
-					</ul>
-				</div>
+				<?php get_template_part('template-parts/tag-list'); ?>
 			</div>
 		</div>
 	</main>

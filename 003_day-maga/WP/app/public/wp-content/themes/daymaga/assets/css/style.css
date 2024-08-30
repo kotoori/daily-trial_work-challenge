@@ -411,7 +411,7 @@ address {
 	border: 1px solid var(--gray33333, #343436);
 	border-radius: 0.4rem;
 	background: #FFF;
-	padding: 0.4rem 1.6rem 0.2rem;
+	padding: 0.3rem 1.6rem 0.3rem;
 	width: -moz-fit-content;
 	width: fit-content;
 	color: var(--gray33333, #343436);
@@ -425,7 +425,7 @@ address {
 .--large.c-category--purple,
 .--large.c-category--coralblue,
 .--large.c-category--blue {
-	padding: 0.4rem 2rem 0.2rem;
+	padding: 0.3rem 2rem 0.3rem;
 	font-size: 1.8rem;
 	line-height: 140%; /* 25.2px */
 }
@@ -547,6 +547,7 @@ address {
 	font-size: 2rem;
 	line-height: 140%; /* 28px */
 	letter-spacing: 0.02em;
+	width: 100%;
 }
 
 .c-tab {
