@@ -40,7 +40,7 @@ function get_category_link_by_slug($slug) {
 	if($category){
 		return get_category_link($category->cat_ID);
 	}
-	return home_url();
+	return home_url('/');
 }
 
 //全カテゴリーをオーダー順に取得

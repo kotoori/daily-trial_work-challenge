@@ -15,7 +15,7 @@
 					<p class="p-404__lead">申し訳ございません。お探しのページが存在しません。</p>
 					<p class="p-404__note">トップページに戻ってコンテンツお探しください。</p>
 					<div class="p-404__btn">
-						<a href="<?php echo home_url();?>" class="c-btn-cont">TOPページに戻る</a>
+						<a href="<?php echo home_url('/');?>" class="c-btn-cont">TOPページに戻る</a>
 					</div>
 				</div><!-- /.p-404__post -->
 			</div><!-- /.p-404__inner -->
