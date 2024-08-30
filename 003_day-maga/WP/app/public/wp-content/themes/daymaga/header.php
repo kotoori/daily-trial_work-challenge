@@ -21,22 +21,6 @@
 	<!-- noindex,nofollow -->
 	<meta name="robots" content="noindex,nofollow">
 
-	<!-- ページ属性情報 -->
-	<title>DayMaga | ビジネスの未来を切り拓くコンサルティング専門情報メディア</title>
-	<meta name="description" content="DayMagaは、最新のビジネス戦略とコンサルティングに関する専門情報を提供するメディアです。企業の成長と成功を支援するためのインサイトと分析をお届けします。">
-
-	<!-- OGP -->
-	<meta property="og:locale" content="ja_JP">
-	<meta property="og:url" content="ページのURL(絶対パス)">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="DayMaga | ビジネスの未来を切り拓くコンサルティング専門情報メディア">
-	<meta property="og:description" content="DayMagaは、最新のビジネス戦略とコンサルティングに関する専門情報を提供するメディアです。企業の成長と成功を支援するためのインサイトと分析をお届けします。">
-	<meta property="og:site_name" content="DayMaga">
-	<meta property="og:image" content="./img/common/ogp.webp">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="630">
-	<meta name="twitter:card" content="summary_large_image">
-
 	<!-- favicon -->
 	<!-- <link rel="icon" href="<?php echo $dir ;?>/assets/img/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href=""> -->
