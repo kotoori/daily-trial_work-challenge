@@ -2382,6 +2382,7 @@ address {
 }
 
 .c-cta {
+	background: transparent url("../img/common/bg_cta-sp.webp") no-repeat center center/cover;
 	padding: 4rem 2rem 4rem 2rem;
 }
 
@@ -2475,6 +2476,10 @@ address {
 .p-top__newest__btn {
 	margin: 3.2rem 0 0 auto;
 	width: 16.1rem;
+}
+
+.p-top__popular {
+	background: #629DE2 url(../img/top/bg_popular-sp.webp) no-repeat center center/cover;
 }
 
 .p-top__all {

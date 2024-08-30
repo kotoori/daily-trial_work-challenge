@@ -10,6 +10,7 @@
 		padding: 6.4rem 3rem 6.4rem 3rem;
 	}
 	@include mq(sm-down){
+		background: transparent url('../img/common/bg_cta-sp.webp') no-repeat center center / cover;
 		padding: 4rem 2rem 4rem 2rem;
 	}
 }
