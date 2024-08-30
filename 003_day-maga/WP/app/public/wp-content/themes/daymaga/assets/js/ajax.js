@@ -105,7 +105,7 @@ $('document').ready(function() {
 		}
 		const args = {category: current_category, order: current_order, page: currentPage, tagId: ajax_params.tag_id};
 		run_ajax(args);
-		jQuery('html, body').animate({scrollTop : 0}, 500, 'swing');
+		jQuery('html, body').scrollTop(0);
 	});
 });
 });//jQuery

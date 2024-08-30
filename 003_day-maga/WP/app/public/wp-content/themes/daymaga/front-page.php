@@ -212,7 +212,7 @@
 					</div><!-- /.c-archive -->
 				</div>
 				<div class="p-top__all__btn">
-					<a href="" class="c-btn" id="js-archives-link">もっと見る</a>
+					<a href="<?php echo get_page_link_by_slug('all'); ?>" class="c-btn" id="js-archives-link">もっと見る</a>
 				</div>
 			</div>
 		</section>
