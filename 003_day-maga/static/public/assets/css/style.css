@@ -2521,7 +2521,7 @@ address {
 }
 
 .p-archive {
-	padding: 4.8rem 0 6.4rem;
+	padding: 4.8rem 0 3.4rem;
 }
 
 .p-archive__content {
@@ -2530,6 +2530,7 @@ address {
 
 .p-archive__pagenation {
 	margin-top: 3.2rem;
+	margin-bottom: 3rem;
 }
 
 .p-archive__search {
