@@ -78,8 +78,8 @@
 						</div><!-- /.c-archive__card-area -->
 					</div><!-- /.c-archive -->
 				</div>
-				<div class="p-archive__pagenation">
-					<div class="c-pagination" id="js-pagination">
+				<div class="p-archive__pagenation" id="js-pagination">
+					<div class="c-pagination">
 						<?php
 							$args = array(
 								'end_size' => 0,

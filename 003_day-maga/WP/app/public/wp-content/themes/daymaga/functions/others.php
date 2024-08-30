@@ -100,16 +100,21 @@ function my_get_archive() {
 		};//hove_posts()
 
 		//ページネーション生成
-		$pagination =  paginate_links(array(
-			'base' => $pageUrl . '/page/%#%/',
-			'total' => $the_query->max_num_pages,
-			'current' => $page,
-			'end_size' => 0,
-			'mid_size' => 1,
-			'prev_next' => true,
-			'prev_text' => '',
-			'next_text' => '',
-		));
+		$pagination = '';
+		if($the_query->max_num_pages > 1){
+			$pagination .= '<div class="c-pagination">';
+			$pagination .=  paginate_links(array(
+				'base' => $pageUrl . '/page/%#%/',
+				'total' => $the_query->max_num_pages,
+				'current' => $page,
+				'end_size' => 0,
+				'mid_size' => 1,
+				'prev_next' => true,
+				'prev_text' => '',
+				'next_text' => '',
+			));
+			$pagination .= '</div>';
+		}
 		wp_reset_postdata();
 	
 		//アーカイブページのリンク取得
