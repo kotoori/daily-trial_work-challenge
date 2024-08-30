@@ -11,7 +11,7 @@
 			<div class="l-inner">
 				<div class="p-footer__content">
 					<div class="p-footer__logo">
-						<a href="/" class="p-footer__logo__link">
+						<a href="<?php echo home_url(); ?>" class="p-footer__logo__link">
 							<img src="<?php echo $dir ;?>/assets/img/common/logo03.svg" alt="DayMaga" width="334" height="63" loading="lazy">
 						</a>
 					</div>

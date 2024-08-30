@@ -37,7 +37,7 @@
 		<div class="p-header">
 			<<?php echo $logo_tag;?> class="p-header__logo">
 				<span class="sr-only">ビジネスの未来を切り開く。DayMaga コンサルティングの専門情報メディア</span>
-				<a class="p-header__logo__link" href="/">
+				<a class="p-header__logo__link" href="<?php echo home_url(); ?>">
 					<img class="p-header__logo__img" src="<?php echo $dir ;?>/assets/img/common/logo01.svg" alt="" width="260" height="108">
 					<img class="p-header__logo__img--scroll" src="<?php echo $dir ;?>/assets/img/common/logo02.svg" alt="" width="207" height="43">
 				</a>
