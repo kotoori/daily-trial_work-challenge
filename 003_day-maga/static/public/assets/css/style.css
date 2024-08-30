@@ -290,6 +290,7 @@ address {
 .c-btn-cta-large--ptn2 .c-btn-cta-large__lower {
 	position: relative;
 	z-index: 0;
+	filter: drop-shadow(0px 0px 34px rgba(0, 0, 0, 0.05)) drop-shadow(0px 24px 44px rgba(0, 0, 0, 0.05));
 	margin-top: -1rem;
 	border: 1px solid var(--white, #FFF);
 	border-radius: 0.8rem;
@@ -324,7 +325,7 @@ address {
 
 .c-btn-cta-large--ptn2 .c-btn-cta-large__lower {
 	border-radius: 1.2rem;
-	background: #2A84BF;
+	background: transparent;
 	padding: 1.5rem 5rem 1.5rem 3.1rem;
 	color: var(--white, #FFF);
 	letter-spacing: 0.08em;
@@ -411,7 +412,7 @@ address {
 	border: 1px solid var(--gray33333, #343436);
 	border-radius: 0.4rem;
 	background: #FFF;
-	padding: 0.4rem 1.6rem 0.2rem;
+	padding: 0.3rem 1.6rem 0.3rem;
 	width: -moz-fit-content;
 	width: fit-content;
 	color: var(--gray33333, #343436);
@@ -542,6 +543,7 @@ address {
 	border-radius: 1.2rem;
 	background: var(--white, #FFF);
 	padding: 1.66rem;
+	width: 100%;
 	color: var(--gray33333, #343436);
 	font-weight: 500;
 	font-size: 2rem;
@@ -762,7 +764,7 @@ address {
 .c-archive__card-area {
 	position: relative;
 	z-index: 10;
-	transition: background-color 0.3s ease 0s;
+	transition: background-color 0.2s ease 0s;
 	border-radius: 0 1.6rem 1.6rem 1.6rem;
 	padding: 3.2rem;
 }

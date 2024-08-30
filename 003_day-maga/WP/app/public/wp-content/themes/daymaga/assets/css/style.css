@@ -324,7 +324,7 @@ address {
 
 .c-btn-cta-large--ptn2 .c-btn-cta-large__lower {
 	border-radius: 1.2rem;
-	background: #2A84BF;
+	background: transparent;
 	padding: 1.5rem 5rem 1.5rem 3.1rem;
 	color: var(--white, #FFF);
 	letter-spacing: 0.08em;
@@ -425,7 +425,7 @@ address {
 .--large.c-category--purple,
 .--large.c-category--coralblue,
 .--large.c-category--blue {
-	padding: 0.3rem 2rem 0.3rem;
+	padding: 0.4rem 2rem 0.2rem;
 	font-size: 1.8rem;
 	line-height: 140%; /* 25.2px */
 }
@@ -542,12 +542,12 @@ address {
 	border-radius: 1.2rem;
 	background: var(--white, #FFF);
 	padding: 1.66rem;
+	width: 100%;
 	color: var(--gray33333, #343436);
 	font-weight: 500;
 	font-size: 2rem;
 	line-height: 140%; /* 28px */
 	letter-spacing: 0.02em;
-	width: 100%;
 }
 
 .c-tab {
