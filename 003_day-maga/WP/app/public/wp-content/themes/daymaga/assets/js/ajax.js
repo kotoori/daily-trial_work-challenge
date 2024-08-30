@@ -17,9 +17,7 @@ $('document').ready(function() {
 		return post_num;
 	}
 	const run_ajax = ({category="all", order="date", page=1, tagId=-1}) => {
-		console.log(category + ' ' + order + ' ' + page);
 		const pageUrl = window.location.href;
-		console.log(tagId);
 		$.ajax({
 			type: 'POST',
 			url: ajax_params.ajax_url,
@@ -35,7 +33,6 @@ $('document').ready(function() {
 			},
 			dataType: 'json',
 			success: function( response ) {
-				console.log( '成功しました：');
 				//card一覧を更新
 				$('#js-archive__container').empty();
 				$('#js-archive__container').append(response.cards);
@@ -54,18 +51,12 @@ $('document').ready(function() {
 	const init_category = jQuery('.js-tab.is-active').data('category');
 	const init_order = jQuery('.js-order.is-active').data('order');
 	const args = {category: init_category, order: init_order, page: currentPage, tagId: ajax_params.tag_id};
-	if (ajax_params.tag_id != -1) {
-		console.log('tagId is set' + ajax_params.tagId);
-	}else{
-		console.log('tagId is not set');
-	}
 	run_ajax(args);
 
 	//カテゴリー切り替え
 	$(tab).on('click', function() {
 		const current_category = jQuery(this).data('category');
 		const current_order = jQuery('.js-order.is-active').data('order');
-		console.log(current_category);
 		const args = {category: current_category, order: current_order, page: currentPage, tagId: ajax_params.tag_id};
 		run_ajax(args);
 	});
