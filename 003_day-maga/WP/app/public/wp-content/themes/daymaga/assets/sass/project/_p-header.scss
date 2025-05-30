@@ -1,0 +1,248 @@
+@use "global" as *;
+
+.p-header{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	height: 100%;
+	.is-scroll &{
+		background: var(--light-gray, #E6EDF3);
+	}
+}
+
+.p-header__logo{
+	margin: 3.2rem 0 0 4.8rem;
+	width: 26rem;
+	max-width: 100%;
+	@include mq(md-down){
+		margin: 3.2rem 0 0 2.0rem;
+	}
+	.is-scroll &{
+		width: 20.6rem;
+		margin: 2.9rem 0 0 4.8rem;
+		@include mq(md-down){
+			width: 16rem;
+			margin: 2.0rem 0 1.93rem 2.4rem;
+		}
+	}
+}
+
+.p-header__logo__link{
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.p-header__logo__img{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s ease 0s;
+	.is-scroll &{
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+.p-header__logo__img--scroll{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s ease 0s;
+.is-scroll &{
+	visibility: visible;
+	opacity: 1;
+}
+}
+
+
+.p-header__nav{
+	border-radius: 0px 0px 0px 32px;
+	background: var(--blue, #135097);
+	height: $size-header-height-pc;
+	padding: 0 clamp(3.4rem, -116px + 12.5vw, 6.4rem);//1200px~1440px
+	display: flex;
+	align-items: center;
+	gap: clamp(2.8rem, -72px + 8.33vw, 4.8rem);//1200px~1440px
+	@include mq(elg-down){
+		padding: 0 4.4rem;
+		gap: 0 3.8rem;
+	}
+	@include mq(md-down){
+		width: fit-content;
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+		padding: 2.8rem 2.4rem 2.8rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 100;
+		.is-scroll &{
+			flex-direction: row;
+			gap: 2.4rem;
+			padding: 2.0rem 2.4rem 2.0rem;
+		}
+		&.is-open{
+			flex-direction: column;
+			gap: 3.2rem;
+			min-width: 16.0rem;
+		}
+	}
+}
+
+.p-header__nav__list{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	gap: clamp(2.8rem, -72px + 8.33vw, 4.8rem);//1200px~1440px
+	@include mq(elg-down){
+		gap: 0 3.8rem;
+	}
+	@include mq(md-down){
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		gap: 3.2rem;
+		width: 0;
+		height: 0;
+		visibility: hidden;
+		opacity: 0;
+		overflow: hidden;
+		transition: all 0.5s ease 0s;
+		.is-open &{
+			width: 19.2rem;
+			height: 17.2rem;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+}
+
+.p-header__nav__item{
+	@include mq(md-down){
+		width: 100%;
+	}
+}
+
+.p-header__nav__link{
+	color: var(--white, #FFF);
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 120%;
+	display: block;
+	width: 100%;
+	text-align: center;
+	@include hs(hp){
+		transition: all 0.3s ease 0s;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	@include hs(hi){
+		&:active{
+			opacity: 0.8;
+		}
+	}
+}
+
+.p-header__nav__cta{
+	display: flex;
+	align-items: center;
+	gap: 0 3.2rem;
+}
+
+.p-header__nav__btn{
+	width:fit-content;
+	min-width: 14.4rem;
+}
+
+.p-header__nav__search{
+	width: 2.8rem;
+}
+.p-header__nav__search__link{
+	width: 100%;
+	@include hs(hp){
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	@include hs(hi){
+		&:active{
+			opacity: 0.8;
+		}
+	}
+}
+
+//hamburger menu
+.p-header__hamburger{
+	appearance: none;
+	width: 3.6rem;
+	height: 2.4rem;	// タップ範囲44px固定
+	cursor: pointer;
+	margin-left: auto;
+	position: relative;
+	z-index: 30;	//box-shadowより手前に配置
+	@include hs(hp){
+		transition: all 0.3s ease 0s;
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+	@include hs(hi){
+		&:active{
+			opacity: 0.7;
+		}
+	}
+}
+
+.p-header__hamburger__icon{
+	display: inline-block;
+	width: 100%;
+	height: 24px;	//実際のhamburgerボタンの高さ
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.p-header__hamburger__bar{
+	display: inline-block;
+	width: 3.6rem;
+	position: absolute;
+	left: 2px;
+	&:nth-child(1),&:nth-child(2),&:nth-child(3){
+		height: 2px;
+		background-color: $color-light;
+		border-radius: 2px;
+		transition: all 0.3s ease 0s;
+	}
+	&:nth-child(1){
+		top: 0;
+	}
+	&:nth-child(2){
+		top: 10px;
+	}
+	&:nth-child(3){
+		top: 20px;
+	}
+	.is-open &{
+		&:nth-child(1){
+			top: 5px;
+			transform: rotate(32deg);
+		}
+		&:nth-child(2){
+			opacity: 0;
+		}
+		&:nth-child(3){
+			top: 5px;
+			transform: rotate(-32deg);
+		}
+	}
+}

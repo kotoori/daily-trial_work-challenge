@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.c-pagination{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.8rem;
+	a{
+		@include hs(hp){
+			transition: all 0.3s ease 0s;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+		@include hs(hi){
+			&:active{
+				opacity: 0.8;
+			}
+		}
+	}
+
+	.page-numbers{
+		color: var(--Gray67, #676E87);
+		font-size: 2rem;
+		font-weight: 400;
+		line-height: 140%; /* 28px */
+		letter-spacing: 0.015em;
+		width: 2.8rem;
+		height: 3.2rem;
+		display: grid;
+		place-items: center;
+		&.current{
+			border-radius: 0.4rem;
+			background: var(--lightblue2, #629DE2);
+			color: var(--white, #FFF);
+		}
+		&.dots{
+			padding-top: 0.4rem;
+		}
+		&.prev, &.next{
+			width: 5.2rem;
+			height: 3.6rem;
+		}
+		&.prev{
+			background: transparent url('../img/common/icon_pagination-prev.svg') no-repeat center center / contain;
+		}
+		&.next{
+			background: transparent url('../img/common/icon_pagination-next.svg') no-repeat center center / contain;
+		}
+	}
+}

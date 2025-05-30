@@ -1,0 +1,122 @@
+@use "global" as *;
+
+.c-tab{
+	display: flex;
+	padding-block: 0.6rem 0.4rem;
+	padding-inline: 2.0rem  2.0rem;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	border-radius: 1.2rem 1.2rem 0 0;
+	background-color: #fff;
+	transition: all 0.3s;
+	border-width: 0.1rem;
+	border-style: solid;
+	width: fit-content;
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 150%; /* 24px */
+	cursor: pointer;
+	@include mq(md-down){
+		writing-mode: vertical-rl;
+		text-orientation: upright;
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+		-webkit-text-orientation: upright;
+		text-orientation: upright;
+		word-break: break-all;
+		border-radius: 0 1.2rem 1.2rem 0;
+	}
+	@include mq(sm-down){
+	font-size: 1.4rem;
+	line-height: 115%; /* 16.1px */
+	letter-spacing: 0.08em;
+	padding-block: 0.6rem 0.4rem;
+	padding-inline: 1.2rem  1.2rem;
+	}
+
+	&.--lightblue2{
+		color: var(--lightblue2, #629DE2);
+		border-color: var(--lightblue2, #629DE2);
+	}
+	&.--blue{
+		color: var(--blue, #135097);
+		border-color: var(--blue, #135097);
+	}
+	&.--coralblue{
+		color: var(--coralblue, #42A0AD);
+		border-color: var(--coralblue, #42A0AD);
+	}
+	&.--purple2{
+		color: var(--purple2, #9C8CFF);
+		border-color: var(--purple2, #9C8CFF);
+	}
+	&.--purple{
+		color: var(--purple, #C88DEC);
+		border-color: var(--purple, #C88DEC);
+	}
+
+	&.is-active{
+		color: #FFF;
+		pointer-events: none;
+		&.--lightblue2{
+			background-color: var(--lightblue2, #629DE2);
+		}
+		&.--blue{
+			background-color: var(--blue, #135097);
+		}
+		&.--coralblue{
+			background-color: var(--coralblue, #42A0AD);
+		}
+		&.--purple2{
+			background-color: var(--purple2, #9C8CFF);
+		}
+		&.--purple{
+			background-color: var(--purple, #C88DEC);
+		}
+	}
+
+	@include hs(hp){
+		transition: all 0.3s ease 0s;
+		&:hover{
+			color: #FFF;
+			&.--lightblue2{
+				background-color: var(--lightblue2, #629DE2);
+			}
+			&.--blue{
+				background-color: var(--blue, #135097);
+			}
+			&.--coralblue{
+				background-color: var(--coralblue, #42A0AD);
+			}
+			&.--purple2{
+				background-color: var(--purple2, #9C8CFF);
+			}
+			&.--purple{
+				background-color: var(--purple, #C88DEC);
+			}
+		}
+	}
+	@include hs(hi){
+		&:active{
+			color: #FFF;
+			&.--lightblue2{
+				background-color: var(--lightblue2, #629DE2);
+			}
+			&.--blue{
+				background-color: var(--blue, #135097);
+			}
+			&.--coralblue{
+				background-color: var(--coralblue, #42A0AD);
+			}
+			&.--purple2{
+				background-color: var(--purple2, #9C8CFF);
+			}
+			&.--purple{
+				background-color: var(--purple, #C88DEC);
+			}
+		}
+	}
+}
+
+

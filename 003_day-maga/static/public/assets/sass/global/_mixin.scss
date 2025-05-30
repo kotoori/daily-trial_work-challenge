@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "variables" as *;
+
+// ---
+// メディアクエリー
+// ---
+//breakpoint用メディアクエリのmixin
+@mixin mq($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+//hover style用メディアクエリのmixin
+@mixin hs($hover-possibility) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($hover-possibilities, $hover-possibility)} {
+    //この中をカスタムできる
+    @content;
+  }
+}

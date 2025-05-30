@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.u-sm-down{
+	display: none;
+	@include mq(sm){
+		display: inherit;
+	}
+}
+
+.u-md-down{
+	display: none;
+	@include mq(md-down){
+		display: inherit;
+	}
+}
+
+.u-lg-down{
+	display: none;
+	@include mq(lg-down){
+		display: inherit;
+	}
+}
+
+.u-md-up{
+	display: none;
+	@include mq(md-up){
+		display: inherit;
+	}
+}
+
+.u-lg-up{
+	display: none;
+	@include mq(lg-up){
+		display: inherit;
+	}
+}
+
+.u-elg-up{
+	display: none;
+	@include mq(elg-up){
+		display: inherit;
+	}
+}
